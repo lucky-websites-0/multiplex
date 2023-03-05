@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="Multiplex - Private Theatre Hall" />
+		<meta name="description" content="Multiplex - Private Theatre Hall" />
+		<meta name="author" content="Multiplex" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Multiplex - Private Theatre Hall</title>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="../../../../images/favicon.png">
+		
+		<!-- js-min -->
+		<script src="../../../../js/jquery-3.6.0.min.js"></script>
+		
+		<!-- CSS Custom Scroll Bar-->
+		<link rel="stylesheet" href="../../../../css/custom-scroll-bar.css" />
+		
+		<!-- CSS bootstrap-->
+		<link rel="stylesheet" href="../../../../css/bootstrap.min.css" />
+		<!--  Style -->
+		<link rel="stylesheet" href="../../../../css/style.css" />
+		<!--  Responsive -->
+		<link rel="stylesheet" href="../../../../css/responsive.css" />
+		<!--  Animation to Font-Awesome Icons -->
+		<link rel="stylesheet" href="../../../../css/font-awesome-animation.min.css">
+		
+		<!-- the below line prevent any of its link to open inside iframe, when this page is used inside an iframe in other pages.... --> 
+		<base target="_PARENT">
+		
+		<style>
+			@media (min-width:400px) and (max-width:576px) {
+			.gen-carousel-movies-style-3 .gen-movie-contain .gen-movie-info h3 {
+			font-size: 15px;
+			line-height: 20px;
+			}
+			.gen-carousel-movies-style-3 .gen-movie-contain .gen-movie-meta-holder ul li {
+			font-size: 10px;
+			}
+			}
+			
+			@media (min-width:250px) and (max-width:399px) {
+			.gen-carousel-movies-style-3 .gen-movie-contain .gen-movie-info h3 {
+			font-size: 10px;
+			line-height: 10px;
+			}
+			.gen-carousel-movies-style-3 .gen-movie-contain .gen-info-contain {
+			padding: 10px;
+			}
+			.gen-carousel-movies-style-3 .gen-movie-contain .gen-movie-meta-holder ul li {
+			margin: 0 5px 0px 0;
+			padding: 0 5px 0px 0;
+			font-size: 6px;
+			}
+			.gen-breadcrumb .gen-breadcrumb-title h1 {
+			font-size: 25px;
+			line-height: 35px;
+			}
+			.gen-breadcrumb-container .breadcrumb li {
+			font-size: 10px;
+			}
+			.gen-breadcrumb {
+			padding-top: 60px;
+			padding: 60px 0;
+			}
+			}
+			
+			.meta-holder-for-span span {
+			font-weight: bold;
+			color: #e50916;
+			}
+			
+			.season:target {
+			display: none;
+			}
+		</style>
+		
+	</head>
+	
+	<body>
+		
+		<!--=========== Loader =============-->
+		<div id="gen-loading">
+			<div id="gen-loading-center">
+				<img src="../../../../images/multiplex-loading.gif" alt="loading">
+			</div>
+		</div>
+		<!--=========== Loader =============-->
+		
+		<!--========== Header ==============-->
+		<header id="gen-header" class="gen-header-style-1 gen-has-sticky">
+			<div class="gen-bottom-header">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<nav class="navbar navbar-expand-lg navbar-light">
+								<a class="navbar-brand" href="../../../../index.html">
+									<img class="img-fluid logo" src="../../../../images/logo.png" alt="multiplex-image">
+								</a>
+								<div class="collapse navbar-collapse" id="navbarSupportedContent">
+									<div id="gen-menu-contain" class="gen-menu-contain">
+										<ul id="gen-main-menu" class="navbar-nav ml-auto">
+											<li class="menu-item active">
+												<a href="../../../add-ons/shows-map/all-shows-list.html">All Shows</a>
+												<i class="fa fa-chevron-down gen-submenu-icon"></i>
+												<ul class="sub-menu">
+													<li class="menu-item menu-item-has-children">
+														<a data-toggle="modal" data-target="#currentShow" class="cursor-pointer">
+															Tom and Jerry
+														</a>
+														<i class="fa fa-chevron-down gen-submenu-icon"></i>
+													</li>
+													<li class="menu-item">
+														<a data-toggle="modal" data-target="#restOfTheShows" class="text-warning cursor-pointer">
+															<span>
+																View Rest of the shows
+																<i class="fas fa-angle-double-right text-warning faa-passing faa-fast animated"></i>
+															</span>
+														</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="gen-header-info-box">
+									<div class="block mr-4">
+										<input type="search" placeholder="Click to Search ..." data-toggle="modal" data-target="#searchModal" autocomplete="off" required>
+										<!-- Add Search-drop suggestion Data like "Doraemon, Shin-chan... etc" and its link
+										in "search-drop_content.js" file (Inside All-tv-shows-data folder) -->
+									</div>
+									<div class="play-random-video-holder" title="Play RANDOM Video">
+										<a data-toggle="modal" data-target="#playRandomVideo" class="cursor-pointer" id="random-video-inside">
+											<i class="fas fa-random fa-lg text-warning faa-ring animated"></i>
+										</a>
+									</div>
+									<div class="gen-btn-container">
+										<a href="../../../add-ons/shows-map/all-shows-list.html" class="gen-button">
+											<div class="gen-button-block">
+												<span class="gen-button-line-left"></span>
+												<span class="gen-button-text">List View</span>
+											</div>
+										</a>
+									</div>
+								</div>
+								<button class="navbar-toggler" type="button" data-toggle="collapse"
+								data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+								aria-expanded="false" aria-label="Toggle navigation">
+									<i class="fas fa-bars"></i>
+								</button>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--========== Header ==============-->
+		
+		<!-- breadcrumb -->
+		<div class="gen-breadcrumb hide_this" style="background-image: url('../../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_all.jpeg');">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-12">
+						<nav aria-label="breadcrumb">
+							<div class="gen-breadcrumb-title">
+								<h1>
+									All Seasons
+								</h1>
+							</div>
+							<div class="gen-breadcrumb-container">
+								<ol class="breadcrumb justify-content-center">
+									<li class="breadcrumb-item"><a href="../../../../index.html"><i class="fas fa-home mr-2"></i>Home</a></li>
+									<li class="breadcrumb-item"><a href="../../../tv-show-4.html">Tom and Jerry</a></li>
+									<li class="breadcrumb-item"><a href="../../ts-4_all-seasons.html">All Seasons</a></li>
+									<li class="breadcrumb-item"><a href="../ts-4_tvsrs_all-seasons.html">TV Series</a></li>
+									<li class="breadcrumb-item active">Tales</li>
+								</ol>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- breadcrumb -->
+		
+		<!-- Section-1 Start -->
+		<section class="gen-section-padding-3">
+			<div class="container">
+				<div class="row justify-content-center mt-3" id="season_all">
+					<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 season for__ts-4_tvsrs_tales_s2" id="hide__ts-4_tvsrs_tales_s1">
+						<div class="gen-carousel-movies-style-3 movie-grid style-3">
+							<div class="gen-movie-contain">
+								<div class="gen-movie-img">
+									<img src="" class="lazy" data-src="../../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/ts-4_tvsrs_tales_s1_all.jpeg" alt="Multiplex-image">
+									<div class="gen-movie-action">
+										<a href="tales/ts-4_tvsrs_tales_s1_all.html" class="gen-button">
+											<i class="fa fa-play"></i>
+										</a>
+									</div>
+								</div>
+								<div class="gen-info-contain">
+									<div class="gen-movie-info">
+										<h3>Tom and Jerry</h3>
+									</div>
+									<div class="gen-movie-meta-holder meta-holder-for-span">
+										<ul>
+											<li>Season 1</li>
+											<li>
+												<span>13 Episodes</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-3 season for__ts-4_tvsrs_tales_s1" id="hide__ts-4_tvsrs_tales_s2">
+						<div class="gen-carousel-movies-style-3 movie-grid style-3">
+							<div class="gen-movie-contain">
+								<div class="gen-movie-img">
+									<img src="" class="lazy" data-src="../../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/ts-4_tvsrs_tales_s2_all.jpeg" alt="Multiplex-image">
+									<div class="gen-movie-action">
+										<a href="tales/ts-4_tvsrs_tales_s2_all.html" class="gen-button">
+											<i class="fa fa-play"></i>
+										</a>
+									</div>
+								</div>
+								<div class="gen-info-contain">
+									<div class="gen-movie-info">
+										<h3>Tom and Jerry</h3>
+									</div>
+									<div class="gen-movie-meta-holder meta-holder-for-span">
+										<ul>
+											<li>Season 2</li>
+											<li>
+												<span>13 Episodes</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Section-1 End -->
+		
+		<!-- footer start -->
+		<iframe class="footer-iframe" width="100%" height="730" frameborder="0" scrolling="no" allowtransparency="true" src="../../../add-ons/footer.html"></iframe>
+		<!-- footer End -->
+		
+		<!-- Current-Show Dropdown-Modal Start -->
+		<div class="modal fade" id="currentShow" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content modal-custom-bg-black">
+					<div class="modal-header p-1">
+						<img class="custom-width-modal-logo" src="../../../../images/logo.png" alt="multiplex-image">
+						<h6 class="modal-title text-danger">TV SHOW - 4 (Tab View)</h6>
+						<button type="button" class="btn btn-sm btn-danger" data-dismiss="modal" aria-label="Close">
+							<span>
+								<i class="fas fa-times text-warning faa-pulse animated faa-fast mr-1"></i>
+								Close
+							</span>
+						</button>
+					</div>
+					<div class="modal-body p-0">
+						<iframe width="100%" height="500" frameborder="0" scrolling="yes" allowtransparency="true" src="../../../all-tv-shows-data/all-shows_tab-view.html#show-4"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Current-Show Dropdown-Modal End -->
+		
+		<!-- Rest-Of-The-Shows Dropdown-Modal Start -->
+		<div class="modal fade" id="restOfTheShows" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-xl modal-dialog-centered">
+				<div class="modal-content modal-custom-bg-black">
+					<div class="modal-header p-1">
+						<button type="button" onclick="history.back()" class="btn btn-sm btn-danger text-warning font-weight-bold">
+							<span>
+								<i class="fas fa-angle-double-left mr-1 faa-passing faa-reverse faa-fast animated"></i>
+								Go Back
+							</span>
+						</button>
+						<h6 class="modal-title text-danger">Rest of the Shows</h6>
+						<button type="button" class="btn btn-sm btn-danger" data-dismiss="modal" aria-label="Close">
+							<span>
+								<i class="fas fa-times text-warning faa-pulse animated faa-fast mr-1"></i>
+								Close
+							</span>
+						</button>
+					</div>
+					<div class="modal-body p-0">
+						<iframe width="100%" height="500" frameborder="0" scrolling="yes" allowtransparency="true" src="../../../../index.html#hide-4"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Rest-Of-The-Shows Dropdown-Modal End -->
+		
+		<!-- Search-Modal Start -->
+		<div class="modal fade" id="searchModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content modal-custom-bg-black">
+					<div class="modal-header p-1">
+						<img class="custom-width-modal-logo" src="../../../../images/logo.png" alt="multiplex-image">
+						<h6 class="modal-title text-danger">Universal Search</h6>
+						<button type="button" class="btn btn-sm btn-danger" data-dismiss="modal" aria-label="Close">
+							<span>
+								<i class="fas fa-times text-warning faa-pulse animated faa-fast mr-1"></i>
+								Close
+							</span>
+						</button>
+					</div>
+					<div class="modal-body p-0">
+						<iframe width="100%" height="300" frameborder="0" scrolling="yes" allowtransparency="true" src="../../../add-ons/universal-search.html"></iframe>
+					</div>
+					<div class="modal-footer justify-content-center text-warning p-0">
+						<p><small><em>Upto 3 suggestions will show at a time..</em></small></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Search-Modal End -->
+		
+		<!-- Play-Random-Video Gridtype-Modal Start -->
+		<div class="modal fade" id="playRandomVideo" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog modal-xl modal-dialog-centered">
+				<div class="modal-content modal-custom-bg-black">
+					<div class="modal-header p-1">
+						<button type="button" onclick="history.back()" class="btn btn-sm btn-danger text-warning font-weight-bold">
+							<span>
+								<i class="fas fa-angle-double-left mr-1 faa-passing faa-reverse faa-fast animated"></i>
+								Go Back
+							</span>
+						</button>
+						<h6 class="modal-title text-danger">Random Play (TS-4)</h6>
+						<button type="button" class="btn btn-sm btn-danger" data-dismiss="modal" aria-label="Close">
+							<span>
+								<i class="fas fa-times text-warning faa-pulse animated faa-fast mr-1"></i>
+								Close
+							</span>
+						</button>
+					</div>
+					<div class="modal-body p-0">
+						<iframe width="100%" height="450" frameborder="0" scrolling="yes" allowtransparency="true" src="../../../add-ons/play-random-video.html#show-4"></iframe>
+					</div>
+					<div class="modal-footer justify-content-center text-warning p-0">
+						<p><small><em>All videos are best.. Picking one, may <strong>take time</strong> to decide..</em></small></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Play-Random-Video Gridtype-Modal End -->
+		
+		<!-- Back-to-Top start -->
+		<div id="back-to-top">
+			<a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i> </a>
+		</div>
+		<!-- Back-to-Top end -->
+		
+		<!-- js-min -->
+		<script src="../../../../js/asyncloader.min.js"></script>
+		<!-- JS bootstrap -->
+		<script src="../../../../js/bootstrap.min.js"></script>
+		<!-- owl-carousel -->
+		<script src="../../../../js/owl.carousel.min.js"></script>
+		<!-- counter-js -->
+		<script src="../../../../js/jquery.waypoints.min.js"></script>
+		<script src="../../../../js/jquery.counterup.min.js"></script>
+		<!-- popper-js -->
+		<script src="../../../../js/popper.min.js"></script>
+		<script src="../../../../js/swiper-bundle.min.js"></script>
+		<!-- Iscotop -->
+		<script src="../../../../js/isotope.pkgd.min.js"></script>
+		
+		<script src="../../../../js/jquery.magnific-popup.min.js"></script>
+		
+		<script src="../../../../js/slick.min.js"></script>
+		
+		<script src="../../../../js/multiplex-core.js"></script>
+		
+		<script src="../../../../js/script.js"></script>
+		
+		<!-- Lazy-load Images/Backgrounds/Iframes for faster page load -->
+		<script src="../../../../js/tinylazyload.js"></script> 
+		
+		<script>
+			
+			<!-- show SUGGESTION CARD as per URL [START] -->
+			$(document).ready(function () {
+				var urlContains = $(location).prop('hash').substr(1);
+				var trimmedUrl = urlContains.replaceAll("hide__", "");
+				if (urlContains != "") {
+					var $el = $(".for__" + trimmedUrl).fadeIn(450);
+					$('#season_all > div').not($el).hide();
+					} else {
+					$('#season_all > div').fadeIn(450);
+				}
+			});
+			<!-- show SUGGESTION CARD as per URL [END] -->
+			
+		</script>
+		
+	</body>
+	
+</html>

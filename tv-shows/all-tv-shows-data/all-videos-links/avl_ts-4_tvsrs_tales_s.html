@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="Multiplex - Private Theatre Hall" />
+		<meta name="description" content="Multiplex - Private Theatre Hall" />
+		<meta name="author" content="Multiplex" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Multiplex - Private Theatre Hall</title>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="../../../images/favicon.png">
+		
+		<link rel="stylesheet" type="text/css"  href="content/global.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+		
+		<script type="text/javascript" src="content/java/FWDUVPlayer.js"></script>
+		
+		<!-- Setup video player-->
+		<script type="text/javascript">
+			FWDUVPUtils.onReady(function(){
+				
+				
+				const searchParams = new URLSearchParams(window.location.search);
+				
+				const seasonValue = searchParams.get('s');
+				const seasonValueIndex = (seasonValue) ? (Number(seasonValue) - 1).toString() : seasonValue;
+				
+				const episodeValue = searchParams.get('e');
+				const episodeValueIndex = (episodeValue) ? (Number(episodeValue) - 1).toString() : episodeValue;
+				
+				
+				new FWDUVPlayer({		
+					//main settings
+					instanceName:"player1",
+					parentId:"myDiv",
+					playlistsId:"playlists",
+					mainFolderPath:"content",
+					skinPath:"modern_skin_dark",
+					displayType:"fullscreen",
+					initializeOnlyWhenVisible:"no",
+					fillEntireposterScreen:"yes",
+					useVectorIcons:"no",
+					fillEntireVideoScreen:"no",
+					goFullScreenOnButtonPlay:"no",
+					playsinline:"yes",
+					privateVideoPassword:"lucky",
+					youtubeAPIKey:"",
+					useHEXColorsForSkin:"no",
+					normalHEXButtonsColor:"#666666",
+					googleAnalyticsTrackingCode:"",
+					useResumeOnPlay:"no",
+					useDeepLinking:"yes",
+					showPreloader:"yes",
+					preloaderBackgroundColor:"#000000",
+					preloaderFillColor:"#FFFFFF",
+					addKeyboardSupport:"yes",
+					autoScale:"yes",
+					showButtonsToolTip:"yes", 
+					stopVideoWhenPlayComplete:"no",
+					playAfterVideoStop:"no",
+					autoPlay:"yes",
+					autoPlayText:"Click To Unmute",
+					loop:"no",
+					shuffle:"no",
+					showErrorInfo:"yes",
+					maxWidth:980,
+					maxHeight:552,
+					volume:.8,
+					rewindTime:10,
+					buttonsToolTipHideDelay:1.5,
+					backgroundColor:"#000000",
+					videoBackgroundColor:"#000000",
+					posterBackgroundColor:"#000000",
+					buttonsToolTipFontColor:"#5a5a5a",
+					//logo settings
+					showLogo:"yes",
+					logoPath:"content/modern_skin_dark/logo.png",
+					hideLogoWithController:"yes",
+					logoPosition:"topRight",
+					logoLink:"../../../index.html",
+					logoMargins:10,
+					//playlists/categories settings
+					showPlaylistsSearchInput:"yes",
+					usePlaylistsSelectBox:"yes",
+					showPlaylistsButtonAndPlaylists:"yes",
+					showPlaylistsByDefault:"no",
+					thumbnailSelectedType:"opacity",
+					startAtPlaylist:seasonValueIndex,
+					buttonsMargins:15,
+					thumbnailMaxWidth:350, 
+					thumbnailMaxHeight:350,
+					horizontalSpaceBetweenThumbnails:40,
+					verticalSpaceBetweenThumbnails:40,
+					inputBackgroundColor:"#333333",
+					inputColor:"#999999",
+					//playlist settings
+					showPlaylistButtonAndPlaylist:"yes",
+					playlistPosition:"right",
+					showPlaylistByDefault:"no",
+					showPlaylistName:"yes",
+					showSearchInput:"yes",
+					showLoopButton:"yes",
+					showShuffleButton:"yes",
+					showPlaylistOnFullScreen:"yes",
+					showNextAndPrevButtons:"yes",
+					showThumbnail:"yes",
+					showOnlyThumbnail:"no",
+					forceDisableDownloadButtonForFolder:"yes",
+					addMouseWheelSupport:"yes", 
+					startAtRandomVideo:"no",
+					stopAfterLastVideoHasPlayed:"no",
+					addScrollOnMouseMove:"yes",
+					randomizePlaylist:'no',
+					folderVideoLabel:"VIDEO ",
+					playlistRightWidth:290,
+					playlistBottomHeight:380,
+					startAtVideo:episodeValueIndex,
+					maxPlaylistItems:50000,
+					thumbnailWidth:71,
+					thumbnailHeight:71,
+					spaceBetweenControllerAndPlaylist:1,
+					spaceBetweenThumbnails:1,
+					scrollbarOffestWidth:8,
+					scollbarSpeedSensitivity:.5,
+					playlistBackgroundColor:"#000000",
+					playlistNameColor:"#FFFFFF",
+					thumbnailNormalBackgroundColor:"#1b1b1b",
+					thumbnailHoverBackgroundColor:"#313131",
+					thumbnailDisabledBackgroundColor:"#272727",
+					searchInputBackgroundColor:"#000000",
+					searchInputColor:"#999999",
+					youtubeAndFolderVideoTitleColor:"#FFFFFF",
+					folderAudioSecondTitleColor:"#999999",
+					youtubeOwnerColor:"#888888",
+					youtubeDescriptionColor:"#888888",
+					mainSelectorBackgroundSelectedColor:"#FFFFFF",
+					mainSelectorTextNormalColor:"#FFFFFF",
+					mainSelectorTextSelectedColor:"#000000",
+					mainButtonBackgroundNormalColor:"#212021",
+					mainButtonBackgroundSelectedColor:"#FFFFFF",
+					mainButtonTextNormalColor:"#FFFFFF",
+					mainButtonTextSelectedColor:"#000000",
+					//controller settings
+					showController:"yes",
+					showControllerWhenVideoIsStopped:"yes",
+					showNextAndPrevButtonsInController:"no",
+					showRewindButton:"no",
+					showPlaybackRateButton:"yes",
+					showVolumeButton:"yes",
+					showTime:"yes",
+					showQualityButton:"yes",
+					showInfoButton:"yes",
+					showDownloadButton:"no",
+					showShareButton:"no",
+					showEmbedButton:"no",
+					showChromecastButton:"no",
+					showFullScreenButton:"yes",
+					disableVideoScrubber:"no",
+					showScrubberWhenControllerIsHidden:"yes",
+					showMainScrubberToolTipLabel:"yes",
+					showDefaultControllerForVimeo:"yes",
+					repeatBackground:"yes",
+					controllerHeight:43,
+					controllerHideDelay:3,
+					startSpaceBetweenButtons:10,
+					spaceBetweenButtons:10,
+					scrubbersOffsetWidth:2,
+					mainScrubberOffestTop:17,
+					timeOffsetLeftWidth:2,
+					timeOffsetRightWidth:2,
+					timeOffsetTop:-1,
+					volumeScrubberHeight:80,
+					volumeScrubberOfsetHeight:20,
+					timeColor:"#888888",
+					youtubeQualityButtonNormalColor:"#888888",
+					youtubeQualityButtonSelectedColor:"#FFFFFF",
+					scrubbersToolTipLabelBackgroundColor:"#FFFFFF",
+					scrubbersToolTipLabelFontColor:"#5a5a5a",
+					//advertisement on pause window
+					aopwTitle:"Advertisement",
+					aopwWidth:400,
+					aopwHeight:240,
+					aopwBorderSize:6,
+					aopwTitleColor:"#FFFFFF",
+					//subtitle
+					subtitlesOffLabel:"Subtitle off",
+					//popup add windows
+					showPopupAdsCloseButton:"yes",
+					//embed window and info window
+					embedAndInfoWindowCloseButtonMargins:15,
+					borderColor:"#333333",
+					mainLabelsColor:"#FFFFFF",
+					secondaryLabelsColor:"#a1a1a1",
+					shareAndEmbedTextColor:"#5a5a5a",
+					inputBackgroundColor:"#000000",
+					inputColor:"#FFFFFF",
+					//login
+		            playIfLoggedIn:"no",
+		            playIfLoggedInMessage:"Please <a href='https://google.com' target='_blank'>login</a> to play this video.",
+					//audio visualizer
+					audioVisualizerLinesColor:"#0099FF",
+					audioVisualizerCircleColor:"#FFFFFF",
+					//lightbox settings
+					closeLightBoxWhenPlayComplete:"no",
+					lightBoxBackgroundOpacity:.6,
+					lightBoxBackgroundColor:"#000000",
+					//sticky on scroll
+					stickyOnScroll:"no",
+					stickyOnScrollShowOpener:"yes",
+					stickyOnScrollWidth:"700",
+					stickyOnScrollHeight:"394",
+					//sticky display settings
+					showOpener:"yes",
+					showOpenerPlayPauseButton:"yes",
+					verticalPosition:"bottom",
+					horizontalPosition:"center",
+					showPlayerByDefault:"yes",
+					animatePlayer:"yes",
+					openerAlignment:"right",
+					mainBackgroundImagePath:"content/modern_skin_dark/main-background.png",
+					openerEqulizerOffsetTop:-1,
+					openerEqulizerOffsetLeft:3,
+					offsetX:0,
+					offsetY:0,
+					//playback rate / speed
+					defaultPlaybackRate:1, //0.25, 0.5, 1, 1.25, 1.2, 2
+					//cuepoints
+					executeCuepointsOnlyOnce:"no",
+					//annotations
+					showAnnotationsPositionTool:"no",
+					//ads
+					openNewPageAtTheEndOfTheAds:"no",
+					adsButtonsPosition:"left",
+					skipToVideoText:"You can skip to video in: ",
+					skipToVideoButtonText:"Skip Ad",
+					adsTextNormalColor:"#888888",
+					adsTextSelectedColor:"#FFFFFF",
+					adsBorderNormalColor:"#444444",
+					adsBorderSelectedColor:"#FFFFFF",
+					//a to b loop
+					useAToB:"yes",
+					atbTimeBackgroundColor:"transparent",
+					atbTimeTextColorNormal:"#888888",
+					atbTimeTextColorSelected:"#FFFFFF",
+					atbButtonTextNormalColor:"#888888",
+					atbButtonTextSelectedColor:"#FFFFFF",
+					atbButtonBackgroundNormalColor:"#FFFFFF",
+					atbButtonBackgroundSelectedColor:"#000000",
+					//thumbnails preview
+					thumbnailsPreviewWidth:196,
+					thumbnailsPreviewHeight:110,
+					thumbnailsPreviewBackgroundColor:"#000000",
+					thumbnailsPreviewBorderColor:"#666",
+					thumbnailsPreviewLabelBackgroundColor:"#666",
+					thumbnailsPreviewLabelFontColor:"#FFF",
+					// context menu
+					showContextmenu:'yes',
+					showScriptDeveloper:"no",
+					contextMenuBackgroundColor:"#1f1f1f",
+					contextMenuBorderColor:"#1f1f1f",
+					contextMenuSpacerColor:"#333",
+					contextMenuItemNormalColor:"#666666",
+					contextMenuItemSelectedColor:"#FFFFFF",
+					contextMenuItemDisabledColor:"#333"
+				});
+			});
+		</script>
+		
+		<!-- the below line prevent any of its link to open inside iframe, when this page is used inside an iframe in other pages.... --> 
+		<base target="_PARENT">
+		
+	</head>
+	
+	<body style="background-color:#999999; padding:0px; margin:0px;">	
+		
+		<div id="myDiv" style="position:relative; left:0px; top:0px;"></div>
+		
+		<!--  ts-4_tvsrs_tales all --(Start)-->
+		<ul id="playlists" style="display:none;">
+			
+			<li data-source="ts-4_tvsrs_tales_s1" data-playlist-name="TS-4 TVSRS TALES SEASON-1" data-thumbnail-path="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/ts-4_tvsrs_tales_s1_all.jpeg">
+				<p class="fwduvp-categories-title"><span class="fwduvp-header">Title: </span><span class="fwduvp-title">TS-4 TVSRS TALES SEASON-1</span></p>
+				<p class="fwduvp-categories-type"><span class="fwduvp-header">Type: </span>SEASON</p>
+				<p class="fwduvp-categories-description"><span class="fwduvp-header">Description: </span><strong>Click to watch</strong> all episodes.</p>
+			</li>
+			
+			<li data-source="ts-4_tvsrs_tales_s2" data-playlist-name="TS-4 TVSRS TALES SEASON-2" data-thumbnail-path="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/ts-4_tvsrs_tales_s2_all.jpeg">
+				<p class="fwduvp-categories-title"><span class="fwduvp-header">Title: </span><span class="fwduvp-title">TS-4 TVSRS TALES SEASON-2</span></p>
+				<p class="fwduvp-categories-type"><span class="fwduvp-header">Type: </span>SEASON</p>
+				<p class="fwduvp-categories-description"><span class="fwduvp-header">Description: </span><strong>Click to watch</strong> all episodes.</p>
+			</li>
+			
+		</ul>
+		<!--  ts-4_tvsrs_tales all --(End)-->
+		
+		<!--  ts-4_tvsrs_tales_s1 all --(Start)-->
+		<ul id="ts-4_tvsrs_tales_s1" style="display:none;">
+			
+			<!--  ts-4_tvsrs_tales_s1_e1a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e1a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1tyf4JhGxW9X1itDozuW8PSztGwtrhFNT?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e1a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e1a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e1a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-1a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e1a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e1b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e1b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1jGhoHjd7ZP9qg_eeE2KyQHRvGdSmPG9_?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e1b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e1b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e1b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-1b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e1b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e1c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e1c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1EDrX45zKJLZ9x6PsxdaiIRwQkyfzlZbi?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e1c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e1c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e1c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-1c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e1c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e2a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e2a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1G1I-VFUQmHDpi0To60STznNGlZZ8mdNg?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e2a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e2a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e2a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-2a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e2a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e2b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e2b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1c18QodmNy2O1WRxLsyHF9Gk0Bg1F0iEz?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e2b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e2b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e2b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-2b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e2b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e2c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e2c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1n9I00nNChmJwQN2wIr0YrGIq4x4HARru?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e2c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e2c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e2c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-2c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e2c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e3a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e3a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1NLUQMHI32X_bcfI0RNV7beFry1QvWLMs?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e3a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e3a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e3a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-3a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e3a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e3b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e3b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1BH3HaUdWpTTVc4Yl_TRwLHSGN0d9S3UK?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e3b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e3b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e3b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-3b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e3b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e3c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e3c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1perOBYSgxtra3Fu-g1Wo_EVGeNA1wZ2E?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e3c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e3c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e3c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-3c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e3c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e4a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e4a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1x4d39w50UbDImO2UuQ1ivqhm0lGvJ56s?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e4a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e4a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e4a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-4a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e4a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e4b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e4b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1--ZfR908zLcWSgCDgrtN6MuM2ywCJazf?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e4b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e4b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e4b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-4b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e4b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e4c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e4c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1GpQr1nZe7oTlZ_s3wEWqZiX4cc6qejun?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e4c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e4c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e4c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-4c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e4c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e5a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e5a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1a2d_SLA3czbkErPXGbEapraDBB8stYHo?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e5a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e5a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e5a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-5a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e5a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e5b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e5b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ofxnaoLtPjykyDxCBAayQHTX6lqovZqK?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e5b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e5b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e5b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-5b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e5b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e5c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e5c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1zJYApmZgV4kt5q4xAYGXvpNi2aCrOZo3?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e5c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e5c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e5c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-5c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e5c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e6a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e6a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ZyIWaCeHQAvTwh3APQgZhgcHqBDVr118?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e6a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e6a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e6a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-6a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e6a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e6b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e6b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ztPg0wqr5qWE8lnARS1IrYgbd6F42AFx?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e6b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e6b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e6b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-6b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e6b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e6c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e6c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1yrlx1VU_2Aqty3RUnkDoxclCNBnDb4sc?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e6c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e6c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e6c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-6c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e6c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e7a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e7a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1abrnpTw8QnwlMlomUtxQCB1OeAgta8Rm?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e7a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e7a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e7a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-7a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e7a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e7b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e7b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Jhf1HV29hwfY7Gl7SY48ZA4XXW2xkVMi?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e7b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e7b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e7b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-7b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e7b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e7c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e7c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1KM6TRk_u_AtsMyVvkqKouLRY3fOXfoWQ?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e7c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e7c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e7c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-7c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e7c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e8a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e8a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1qHPcDUaxEs8AXZO7lL2B330gZBheuQsM?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e8a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e8a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e8a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-8a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e8a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e8b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e8b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1NwZFd93k34z3LYHqrfZEVdiUdj4kyfps?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e8b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e8b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e8b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-8b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e8b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e8c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e8c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1HFHOVAohPNK1Em_G1qK4G65X_e16y9lF?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e8c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e8c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e8c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-8c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e8c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e9a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e9a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1rtgyhEDLBsiTdf6MMq-KHGz2Etf-5Thj?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e9a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e9a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e9a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-9a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e9a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e9b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e9b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/12FAzh0CKnV9vO80bL1o3SN-B3_tFpa3l?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e9b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e9b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e9b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-9b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e9b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e9c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e9c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1J3WFjbe-N1WzqDHZ480F_xd1m_jj2HlG?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e9c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e9c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e9c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-9c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e9c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e10a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e10a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1UrQ3OyRey8YBMdShsIv89WnJIpDydDpq?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e10a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e10a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e10a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-10a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e10a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e10b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e10b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1n_p_76l7sSPHAsYV6EwZJcY4DytB8zYa?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e10b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e10b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e10b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-10b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e10b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e10c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e10c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1hLjWzxAuYuxSAeghLnUY11OOW_CzPy1L?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e10c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e10c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e10c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-10c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e10c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e11a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e11a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ADtAn0dyc558nlC7nIx9CmLvIRnGXma4?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e11a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e11a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e11a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-11a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e11a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e11b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e11b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1mekI5lI6SHHKlO4Xs-mIO2Mh8pEVZdRk?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e11b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e11b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e11b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-11b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e11b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e11c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e11c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1OkO9y95Dlv7SIOhSsE7YP7MnYq4QYFSn?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e11c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e11c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e11c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-11c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e11c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e12a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e12a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1-ezXwh3NTA9G58F5Ph8aO-PMvdV25OOY?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e12a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e12a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e12a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-12a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e12a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e12b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e12b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1HX6z7IjfQmoOrA4KZqJNOu9FYoCOUNfW?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e12b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e12b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e12b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-12b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e12b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e12c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e12c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1P-jOOTaxwjxbrR6UaqeUOkcYHWmrAatu?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e12c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e12c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e12c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-12c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e12c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e13a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e13a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/12tAjZEli94KL7QqTR77gCz_moi_31v3I?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e13a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e13a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e13a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-13a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e13a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e13b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e13b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1d2DTMRR0WaL2N0XmketVbSCKwtleeLoG?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e13b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e13b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e13b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-13b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e13b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s1_e13c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e13c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1IwS79FBVKDWUKO5cL2yQAsH4t-5GkVdb?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-1/all-episodes/ts-4_tvsrs_tales_s1_e13c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s1 e13c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s1 e13c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-1 Episode-13c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s1_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s1_e13c --(End)-->
+			
+		</ul>
+		<!--  ts-4_tvsrs_tales_s1 all --(End)-->
+		
+		<!--  ts-4_tvsrs_tales_s2 all --(Start)-->
+		<ul id="ts-4_tvsrs_tales_s2" style="display:none;">
+			
+			<!--  ts-4_tvsrs_tales_s2_e1a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e1a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1J6eG6Uk7gA3Ul1nC3GGgGOdgysQgi211?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e1a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e1a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e1a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-1a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e1a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e1b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e1b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1dUnWBCTfnCyfFajcIbkmOClYsbjI6Vz0?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e1b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e1b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e1b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-1b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e1b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e1c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e1c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1oqqVHhmYo-pfkP753pYN67o2aU5Tblr-?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e1c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e1c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e1c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-1c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e1c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e2a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e2a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1JWHK5ioZuRPDJ_LMwQo1GpczksllVkDH?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e2a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e2a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e2a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-2a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e2a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e2b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e2b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/10q4lOdQSIGgimY20K1yedRcIKPNxvNqU?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e2b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e2b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e2b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-2b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e2b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e2c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e2c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1fRKBArlT-0-ahzkB4So_J_IDK-aNZZBt?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e2c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e2c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e2c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-2c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e2c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e3a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e3a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1v9ebhGSMUNnh5VkVqrfW_40j5oOJTWVE?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e3a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e3a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e3a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-3a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e3a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e3b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e3b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1bGaND1lVxVGQS3ifKsF09LyXFNGLALNj?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e3b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e3b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e3b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-3b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e3b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e3c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e3c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1dkNhGzfLULVq87Mfw1N_IYeOrUUpTdMz?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e3c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e3c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e3c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-3c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e3c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e4a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e4a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1nmna72s3xVkq3TUeWHpsq0JxH-hXkMGa?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e4a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e4a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e4a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-4a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e4a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e4b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e4b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1eC_aGaqA9w4EmZSMvNkO3cucIMKiWYzn?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e4b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e4b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e4b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-4b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e4b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e4c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e4c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1JzDhBKHyoIc-cS6ua4vf_lLlVqC8jrND?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e4c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e4c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e4c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-4c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e4c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e5a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e5a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Cm9iI0KDqYjdD0NSmDypjiCaNGHbsUEQ?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e5a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e5a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e5a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-5a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e5a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e5b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e5b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1mpXmVhDdJO0kM_FNwen1EMPyijtupKPL?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e5b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e5b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e5b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-5b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e5b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e5c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e5c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1C36wNb_piF6lPltEieJ14VmXckzdVnSP?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e5c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e5c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e5c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-5c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e5c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e6a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e6a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Li_CDTW7mFogMo9-BnSndWhTacWVdjXx?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e6a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e6a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e6a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-6a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e6a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e6b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e6b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1UIUi3JCRkSKOIreT06zY96AnakLLILaJ?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e6b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e6b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e6b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-6b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e6b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e6c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e6c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1064rGJv2baWHP_PZZD7DOxZGPHyMw1KO?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e6c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e6c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e6c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-6c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e6c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e7a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e7a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1g41uXu6Ph2vj6L2aSyWqgkR8lDCA32j5?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e7a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e7a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e7a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-7a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e7a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e7b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e7b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1cV8cD9QvzA2P2u88NDwPedK8VPTWMkeF?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e7b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e7b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e7b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-7b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e7b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e7c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e7c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1xKwlcachbUiKQWOBeT6lL5qLQAvhhoyP?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e7c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e7c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e7c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-7c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e7c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e8a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e8a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1MyQ6niOkr_7z8HnzhwGTrNTltUJ9B2il?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e8a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e8a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e8a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-8a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e8a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e8b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e8b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1b19Fa2zqu_E699hJ-6FelMjJDVu3U6en?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e8b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e8b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e8b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-8b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e8b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e8c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e8c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1TJFpOQ4PWCzXAnhWieJuKbwVJc1lGMN9?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e8c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e8c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e8c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-8c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e8c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e9a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e9a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1gkxwNgLvk0njcVhnB5asO-deWUK6M2qV?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e9a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e9a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e9a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-9a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e9a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e9b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e9b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1y3Z121xDIdOx9yt6CzC6W9b7jI6U4dMl?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e9b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e9b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e9b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-9b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e9b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e9c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e9c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1gNeuru46sd9aOVyUqLdsbJoMedxXyqtU?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e9c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e9c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e9c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-9c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e9c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e10a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e10a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1RNqXxJ5AzPmq7X0I-wKWhoVZPO3_xzdA?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e10a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e10a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e10a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-10a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e10a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e10b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e10b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1B2P0Tjz39M153fUAFHgi5F5YIp2S4ZyX?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e10b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e10b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e10b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-10b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e10b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e10c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e10c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/19pF70bCoaMHsyHoDyxfngOVsPraSTJZK?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e10c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e10c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e10c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-10c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e10c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e11a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e11a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1OFUD-5hpjvhIX7ZXpwSlcfOaoCQ9yQ4j?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e11a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e11a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e11a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-11a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e11a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e11b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e11b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1CDg7l_Mm0sj5e6owrOGZPYUmPhgjv8hZ?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e11b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e11b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e11b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-11b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e11b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e11c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e11c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/14FPQfLqqW5mSmffsvHAIRMtEZukcA--W?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e11c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e11c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e11c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-11c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e11c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e12a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e12a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1iP7xUg0O_ZTNPLW_y-XMzzJXJR3lyBJL?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e12a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e12a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e12a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-12a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e12a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e12b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e12b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1G86f8vMxzE_o9r32IGypP72EA42ZffAa?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e12b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e12b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e12b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-12b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e12b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e12c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e12c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/17JvYwsZ9wyUx1zo4VeDa9_DeGUteNi2Q?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e12c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e12c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e12c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-12c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e12c --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e13a --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e13a.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/17pzFpzcofLXooZDzK0IgZ5Zwt7wFNbxE?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e13a.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e13a</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e13a</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-13a</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e13a --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e13b --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e13b.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/19bR0X84hF9d3QhWDT40qIzfzLG5w5gnR?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e13b.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e13b</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e13b</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-13b</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e13b --(End)-->
+			
+			<!--  ts-4_tvsrs_tales_s2_e13c --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e13c.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Wb2EAF7Zo_-H3gHJtSNq_eV-N4mmtTaN?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/tv-series/tales/season-2/all-episodes/ts-4_tvsrs_tales_s2_e13c.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">s2 e13c</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">s2 e13c</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [TV-SERIES - Tales] Season-2 Episode-13c</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/tv-series/tales/ts-4_tvsrs_tales_s2_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_tvsrs_tales_s2_e13c --(End)-->
+			
+		</ul>
+		<!--  ts-4_tvsrs_tales_s2 all --(End)-->
+		
+		<!--  NO CONTENT --(Start)-->
+		<ul id="no-content" style="display:none;">
+			
+			<!--  NO CONTENT INSIDE --(Start)-->
+			<li data-thumb-source="../../../images/waiting.gif" data-video-source="content/no-video.mp4" data-poster-source="../../../images/waiting.gif" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Listen..</p>
+						<p class="fwduvp-thumbnail-description">This content is unavailable.</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">!! Attention !!</p>
+						<p class="fwduvp-video-main-description">You are opening a content which is NOT AVAILABLE..</p>
+					</div>
+				</div>
+			</li>
+			<!--  NO CONTENT INSIDE --(End)-->
+			
+		</ul>
+		<!--  NO CONTENT --(End)-->
+		
+	</body>
+</html>

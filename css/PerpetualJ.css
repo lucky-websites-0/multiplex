@@ -1,0 +1,63 @@
+* {
+	transition: 0.3s all linear;
+	font-family: 'News Cycle', sans-serif;
+}
+html,
+body {
+	margin: 0;
+	height: 100%;
+	background-color: #181818;
+	background-image: linear-gradient(-130deg, #003, #3cf);
+	background-image: -webkit-linear-gradient(-130deg, #003, #3cf);
+}
+.primary-content {
+	height: 100%;
+	text-align: center;
+	padding: 15px;
+	color: #fff;
+	overflow-y: auto;
+}
+.primary-content .display-1,
+.primary-content .display-2,
+.primary-content .display-3,
+.primary-content .display-4 {
+	font-family: "Audiowide", cursive;
+}
+.primary-content .lead,
+.branding * { font-family: "Wire One", sans-serif; }
+.branding {
+	position: fixed;
+	top: 0;
+	color: #555;
+	padding: 5px 5px 5px 5px;
+	background-color: #fff;
+	border-radius: 50px;
+	margin: 10px;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+.branding:hover {
+	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.45);
+	padding: 5px 5px 5px 15px;
+}
+.branding.inspiration { left: 0; }
+.branding:not(.inspiration) { right: 0; }
+.branding.inspiration:hover { padding: 5px 15px 5px 5px; }
+.branding:not(.inspiration):hover img { margin-left: 5px; }
+.branding.inspiration img { float: left; }
+.branding.inspiration:hover img { margin-right: 5px; }
+.branding:hover p,
+.branding:hover p > span {
+	font-size: 30px;
+	opacity: 1;
+}
+.branding p {
+	margin: 0;
+	font-size: 0;
+}
+.branding p > .name { color: #111; }
+.branding img {
+	margin-left: 0;
+	border-radius: 50%;
+	width: 50px;
+}

@@ -1,0 +1,126 @@
+@media (max-width:1499px) {
+	.gen-appstore-logo, .gen-playstore-logo { height: 30px; }
+}
+
+@media (max-width:767px) and (min-width:650px){
+	footer#gen-footer .gen-footer-top {
+		padding: 18px 0 0;
+	}
+	#gen-footer .gen-footer-style-1 .gen-footer-logo {
+		height: 38px;
+		margin-bottom: 10px;
+	}
+	#gen-footer .social-link li {
+		margin-right: 30px !important;
+	}
+	footer#gen-footer .gen-footer-top p {
+		margin-bottom: 15px;
+		font-size: 13px;
+	}
+	footer#gen-footer .widget {
+		margin-bottom: 10px !important;
+		}
+	footer#gen-footer .widget ul li {
+		margin: 0 0 10px 0;
+	}
+	footer#gen-footer .widget .menu-explore-container{
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+	footer#gen-footer .widget .menu-about-container{
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+	footer#gen-footer .widget .footer-title {
+		font-size: 20px;
+		margin-bottom: 5px;
+	}
+	footer#gen-footer .gen-copyright-footer {
+		padding: 10px 0;
+	}
+	footer#gen-footer .gen-copyright-footer .gen-copyright a {
+		font-size: 14px;
+	}
+}
+
+@media (max-width:649px) and (min-width:450px){
+	footer#gen-footer .gen-footer-top {
+		padding: 17px 0 0;
+	}
+	#gen-footer .gen-footer-style-1 .gen-footer-logo {
+		height: 37px;
+		margin-bottom: 10px;
+	}
+	#gen-footer .social-link li {
+		margin-right: 30px !important;
+	}
+	footer#gen-footer .gen-footer-top p {
+		margin-bottom: 15px;
+		font-size: 12px;
+	}
+	footer#gen-footer .widget {
+		margin-bottom: 10px !important;
+	}
+	footer#gen-footer .widget ul li {
+		margin: 0 0 10px 0;
+	}
+	footer#gen-footer .widget .menu-explore-container{
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+	footer#gen-footer .widget .menu-about-container{
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+	footer#gen-footer .widget .footer-title {
+		font-size: 18px;
+		margin-bottom: 5px;
+	}
+	footer#gen-footer .gen-copyright-footer {
+		padding: 10px 0;
+	}
+	footer#gen-footer .gen-copyright-footer .gen-copyright a {
+		font-size: 14px;
+	}
+}
+
+@media (max-width:449px) and (min-width:250px){
+	footer#gen-footer .gen-footer-top {
+		padding: 15px 0 0;
+	}
+	#gen-footer .gen-footer-style-1 .gen-footer-logo {
+		height: 35px;
+		margin-bottom: 10px;
+	}
+	#gen-footer .social-link li {
+		margin-right: 30px !important;
+	}
+	footer#gen-footer .gen-footer-top p {
+		margin-bottom: 15px;
+		font-size: 11px;
+	}
+	footer#gen-footer .widget {
+		margin-bottom: 10px !important;
+	}
+	footer#gen-footer .widget ul li {
+		margin: 0 0 10px 0;
+	}
+	footer#gen-footer .widget .menu-explore-container{
+		font-size: 10px;
+		margin-bottom: 5px;
+	}
+	footer#gen-footer .widget .menu-about-container{
+		font-size: 10px;
+		margin-bottom: 5px;
+	}
+	footer#gen-footer .widget .footer-title {
+		font-size: 15px;
+		margin-bottom: 5px;
+	}
+	footer#gen-footer .gen-copyright-footer {
+		padding: 10px 0;
+	}
+	footer#gen-footer .gen-copyright-footer .gen-copyright a {
+		font-size: 14px;
+	}
+}

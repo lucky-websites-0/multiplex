@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="Multiplex - Private Theatre Hall" />
+		<meta name="description" content="Multiplex - Private Theatre Hall" />
+		<meta name="author" content="Multiplex" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Multiplex - Private Theatre Hall</title>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="../../../images/favicon.png">
+		
+		<link rel="stylesheet" type="text/css"  href="content/global.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+		
+		<script type="text/javascript" src="content/java/FWDUVPlayer.js"></script>
+		
+		<!-- Setup video player-->
+		<script type="text/javascript">
+			FWDUVPUtils.onReady(function(){
+				
+				
+				const searchParams = new URLSearchParams(window.location.search);
+				
+				const seasonValue = searchParams.get('s');
+				const seasonValueIndex = (seasonValue) ? (Number(seasonValue) - 1).toString() : seasonValue;
+				
+				const episodeValue = searchParams.get('e');
+				const episodeValueIndex = (episodeValue) ? (Number(episodeValue) - 1).toString() : episodeValue;
+				
+				
+				new FWDUVPlayer({		
+					//main settings
+					instanceName:"player1",
+					parentId:"myDiv",
+					playlistsId:"playlists",
+					mainFolderPath:"content",
+					skinPath:"modern_skin_dark",
+					displayType:"fullscreen",
+					initializeOnlyWhenVisible:"no",
+					fillEntireposterScreen:"yes",
+					useVectorIcons:"no",
+					fillEntireVideoScreen:"no",
+					goFullScreenOnButtonPlay:"no",
+					playsinline:"yes",
+					privateVideoPassword:"lucky",
+					youtubeAPIKey:"",
+					useHEXColorsForSkin:"no",
+					normalHEXButtonsColor:"#666666",
+					googleAnalyticsTrackingCode:"",
+					useResumeOnPlay:"no",
+					useDeepLinking:"yes",
+					showPreloader:"yes",
+					preloaderBackgroundColor:"#000000",
+					preloaderFillColor:"#FFFFFF",
+					addKeyboardSupport:"yes",
+					autoScale:"yes",
+					showButtonsToolTip:"yes", 
+					stopVideoWhenPlayComplete:"no",
+					playAfterVideoStop:"no",
+					autoPlay:"yes",
+					autoPlayText:"Click To Unmute",
+					loop:"no",
+					shuffle:"no",
+					showErrorInfo:"yes",
+					maxWidth:980,
+					maxHeight:552,
+					volume:.8,
+					rewindTime:10,
+					buttonsToolTipHideDelay:1.5,
+					backgroundColor:"#000000",
+					videoBackgroundColor:"#000000",
+					posterBackgroundColor:"#000000",
+					buttonsToolTipFontColor:"#5a5a5a",
+					//logo settings
+					showLogo:"yes",
+					logoPath:"content/modern_skin_dark/logo.png",
+					hideLogoWithController:"yes",
+					logoPosition:"topRight",
+					logoLink:"../../../index.html",
+					logoMargins:10,
+					//playlists/categories settings
+					showPlaylistsSearchInput:"yes",
+					usePlaylistsSelectBox:"yes",
+					showPlaylistsButtonAndPlaylists:"yes",
+					showPlaylistsByDefault:"no",
+					thumbnailSelectedType:"opacity",
+					startAtPlaylist:seasonValueIndex,
+					buttonsMargins:15,
+					thumbnailMaxWidth:350, 
+					thumbnailMaxHeight:350,
+					horizontalSpaceBetweenThumbnails:40,
+					verticalSpaceBetweenThumbnails:40,
+					inputBackgroundColor:"#333333",
+					inputColor:"#999999",
+					//playlist settings
+					showPlaylistButtonAndPlaylist:"yes",
+					playlistPosition:"right",
+					showPlaylistByDefault:"no",
+					showPlaylistName:"yes",
+					showSearchInput:"yes",
+					showLoopButton:"yes",
+					showShuffleButton:"yes",
+					showPlaylistOnFullScreen:"yes",
+					showNextAndPrevButtons:"yes",
+					showThumbnail:"yes",
+					showOnlyThumbnail:"no",
+					forceDisableDownloadButtonForFolder:"yes",
+					addMouseWheelSupport:"yes", 
+					startAtRandomVideo:"no",
+					stopAfterLastVideoHasPlayed:"no",
+					addScrollOnMouseMove:"yes",
+					randomizePlaylist:'no',
+					folderVideoLabel:"VIDEO ",
+					playlistRightWidth:290,
+					playlistBottomHeight:380,
+					startAtVideo:episodeValueIndex,
+					maxPlaylistItems:50000,
+					thumbnailWidth:71,
+					thumbnailHeight:71,
+					spaceBetweenControllerAndPlaylist:1,
+					spaceBetweenThumbnails:1,
+					scrollbarOffestWidth:8,
+					scollbarSpeedSensitivity:.5,
+					playlistBackgroundColor:"#000000",
+					playlistNameColor:"#FFFFFF",
+					thumbnailNormalBackgroundColor:"#1b1b1b",
+					thumbnailHoverBackgroundColor:"#313131",
+					thumbnailDisabledBackgroundColor:"#272727",
+					searchInputBackgroundColor:"#000000",
+					searchInputColor:"#999999",
+					youtubeAndFolderVideoTitleColor:"#FFFFFF",
+					folderAudioSecondTitleColor:"#999999",
+					youtubeOwnerColor:"#888888",
+					youtubeDescriptionColor:"#888888",
+					mainSelectorBackgroundSelectedColor:"#FFFFFF",
+					mainSelectorTextNormalColor:"#FFFFFF",
+					mainSelectorTextSelectedColor:"#000000",
+					mainButtonBackgroundNormalColor:"#212021",
+					mainButtonBackgroundSelectedColor:"#FFFFFF",
+					mainButtonTextNormalColor:"#FFFFFF",
+					mainButtonTextSelectedColor:"#000000",
+					//controller settings
+					showController:"yes",
+					showControllerWhenVideoIsStopped:"yes",
+					showNextAndPrevButtonsInController:"no",
+					showRewindButton:"no",
+					showPlaybackRateButton:"yes",
+					showVolumeButton:"yes",
+					showTime:"yes",
+					showQualityButton:"yes",
+					showInfoButton:"yes",
+					showDownloadButton:"no",
+					showShareButton:"no",
+					showEmbedButton:"no",
+					showChromecastButton:"no",
+					showFullScreenButton:"yes",
+					disableVideoScrubber:"no",
+					showScrubberWhenControllerIsHidden:"yes",
+					showMainScrubberToolTipLabel:"yes",
+					showDefaultControllerForVimeo:"yes",
+					repeatBackground:"yes",
+					controllerHeight:43,
+					controllerHideDelay:3,
+					startSpaceBetweenButtons:10,
+					spaceBetweenButtons:10,
+					scrubbersOffsetWidth:2,
+					mainScrubberOffestTop:17,
+					timeOffsetLeftWidth:2,
+					timeOffsetRightWidth:2,
+					timeOffsetTop:-1,
+					volumeScrubberHeight:80,
+					volumeScrubberOfsetHeight:20,
+					timeColor:"#888888",
+					youtubeQualityButtonNormalColor:"#888888",
+					youtubeQualityButtonSelectedColor:"#FFFFFF",
+					scrubbersToolTipLabelBackgroundColor:"#FFFFFF",
+					scrubbersToolTipLabelFontColor:"#5a5a5a",
+					//advertisement on pause window
+					aopwTitle:"Advertisement",
+					aopwWidth:400,
+					aopwHeight:240,
+					aopwBorderSize:6,
+					aopwTitleColor:"#FFFFFF",
+					//subtitle
+					subtitlesOffLabel:"Subtitle off",
+					//popup add windows
+					showPopupAdsCloseButton:"yes",
+					//embed window and info window
+					embedAndInfoWindowCloseButtonMargins:15,
+					borderColor:"#333333",
+					mainLabelsColor:"#FFFFFF",
+					secondaryLabelsColor:"#a1a1a1",
+					shareAndEmbedTextColor:"#5a5a5a",
+					inputBackgroundColor:"#000000",
+					inputColor:"#FFFFFF",
+					//login
+		            playIfLoggedIn:"no",
+		            playIfLoggedInMessage:"Please <a href='https://google.com' target='_blank'>login</a> to play this video.",
+					//audio visualizer
+					audioVisualizerLinesColor:"#0099FF",
+					audioVisualizerCircleColor:"#FFFFFF",
+					//lightbox settings
+					closeLightBoxWhenPlayComplete:"no",
+					lightBoxBackgroundOpacity:.6,
+					lightBoxBackgroundColor:"#000000",
+					//sticky on scroll
+					stickyOnScroll:"no",
+					stickyOnScrollShowOpener:"yes",
+					stickyOnScrollWidth:"700",
+					stickyOnScrollHeight:"394",
+					//sticky display settings
+					showOpener:"yes",
+					showOpenerPlayPauseButton:"yes",
+					verticalPosition:"bottom",
+					horizontalPosition:"center",
+					showPlayerByDefault:"yes",
+					animatePlayer:"yes",
+					openerAlignment:"right",
+					mainBackgroundImagePath:"content/modern_skin_dark/main-background.png",
+					openerEqulizerOffsetTop:-1,
+					openerEqulizerOffsetLeft:3,
+					offsetX:0,
+					offsetY:0,
+					//playback rate / speed
+					defaultPlaybackRate:1, //0.25, 0.5, 1, 1.25, 1.2, 2
+					//cuepoints
+					executeCuepointsOnlyOnce:"no",
+					//annotations
+					showAnnotationsPositionTool:"no",
+					//ads
+					openNewPageAtTheEndOfTheAds:"no",
+					adsButtonsPosition:"left",
+					skipToVideoText:"You can skip to video in: ",
+					skipToVideoButtonText:"Skip Ad",
+					adsTextNormalColor:"#888888",
+					adsTextSelectedColor:"#FFFFFF",
+					adsBorderNormalColor:"#444444",
+					adsBorderSelectedColor:"#FFFFFF",
+					//a to b loop
+					useAToB:"yes",
+					atbTimeBackgroundColor:"transparent",
+					atbTimeTextColorNormal:"#888888",
+					atbTimeTextColorSelected:"#FFFFFF",
+					atbButtonTextNormalColor:"#888888",
+					atbButtonTextSelectedColor:"#FFFFFF",
+					atbButtonBackgroundNormalColor:"#FFFFFF",
+					atbButtonBackgroundSelectedColor:"#000000",
+					//thumbnails preview
+					thumbnailsPreviewWidth:196,
+					thumbnailsPreviewHeight:110,
+					thumbnailsPreviewBackgroundColor:"#000000",
+					thumbnailsPreviewBorderColor:"#666",
+					thumbnailsPreviewLabelBackgroundColor:"#666",
+					thumbnailsPreviewLabelFontColor:"#FFF",
+					// context menu
+					showContextmenu:'yes',
+					showScriptDeveloper:"no",
+					contextMenuBackgroundColor:"#1f1f1f",
+					contextMenuBorderColor:"#1f1f1f",
+					contextMenuSpacerColor:"#333",
+					contextMenuItemNormalColor:"#666666",
+					contextMenuItemSelectedColor:"#FFFFFF",
+					contextMenuItemDisabledColor:"#333"
+				});
+			});
+		</script>
+		
+		<!-- the below line prevent any of its link to open inside iframe, when this page is used inside an iframe in other pages.... --> 
+		<base target="_PARENT">
+		
+	</head>
+	
+	<body style="background-color:#999999; padding:0px; margin:0px;">	
+		
+		<div id="myDiv" style="position:relative; left:0px; top:0px;"></div>
+		
+		<!--  ts-3_returns all --(Start)-->
+		<ul id="playlists" style="display:none;">
+			
+			<li data-source="ts-3_returns_s1" data-playlist-name="TS-3 returns S1" data-thumbnail-path="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_season-1.jpeg">
+				<p class="fwduvp-categories-title"><span class="fwduvp-header">Title: </span><span class="fwduvp-title">TS-3 returns S1</span></p>
+				<p class="fwduvp-categories-type"><span class="fwduvp-header">Type: </span>SEASON</p>
+				<p class="fwduvp-categories-description"><span class="fwduvp-header">Description: </span><strong>Click to watch</strong> all episodes.</p>
+			</li>
+			
+			<li data-source="ts-3_returns_s2" data-playlist-name="TS-3 returns S2" data-thumbnail-path="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_season-2.jpeg">
+				<p class="fwduvp-categories-title"><span class="fwduvp-header">Title: </span><span class="fwduvp-title">TS-3 returns S2</span></p>
+				<p class="fwduvp-categories-type"><span class="fwduvp-header">Type: </span>SEASON</p>
+				<p class="fwduvp-categories-description"><span class="fwduvp-header">Description: </span><strong>Click to watch</strong> all episodes.</p>
+			</li>
+			
+		</ul>
+		<!--  ts-3_returns all --(End)-->
+		
+		<!--  ts-3_returns_s1 all --(Start)-->
+		<ul id="ts-3_returns_s1" style="display:none;">
+			
+			<!--  ts-3_returns_s1_e1 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e1.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1jx5Pav3el3p-wBLzDH1NFYE53xI_S73q?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e1.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e1</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e1</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-1</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e1 --(End)-->
+			
+			<!--  ts-3_returns_s1_e2 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e2.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ki8qpqDhrFPlh2qCKb0007wBMYG_WrVj?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e2.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e2</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e2</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-2</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e2 --(End)-->
+			
+			<!--  ts-3_returns_s1_e3 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e3.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ZfKSnxr-I21PIEDLV4SaXtkoZMbg6-fL?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e3.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e3</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e3</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-3</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e3 --(End)-->
+			
+			<!--  ts-3_returns_s1_e4 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e4.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1kgBdJN9GT6R_O6Vo-0q3UTUacKq8h6qO?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e4.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e4</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e4</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-4</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e4 --(End)-->
+			
+			<!--  ts-3_returns_s1_e5 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e5.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1NRtaDtzzW5aYuXKhqrsnR7gr9fNA76Vv?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e5.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e5</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e5</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-5</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e5 --(End)-->
+			
+			<!--  ts-3_returns_s1_e6 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e6.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1hcHlsMT__Bs0lVPF_t78LJqZFZPJ3C5n?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e6.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e6</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e6</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-6</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e6 --(End)-->
+			
+			<!--  ts-3_returns_s1_e7 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e7.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1hQg9KcFHUyMKzDhbcGlJ6xB3liEO8Tz7?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e7.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e7</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e7</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-7</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e7 --(End)-->
+			
+			<!--  ts-3_returns_s1_e8 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e8.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1dBHSHdN-cjEB4HQySnPkJhh0h7psrhiV?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e8.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e8</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e8</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-8</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e8 --(End)-->
+			
+			<!--  ts-3_returns_s1_e9 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e9.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1DMI9ZwKME8FWXmR4aNtDKDtgnz2rz3UP?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e9.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e9</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e9</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-9</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e9 --(End)-->
+			
+			<!--  ts-3_returns_s1_e10 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e10.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Tq-jta1zw1krrUwL0O9HCj7dH1iPFu1A?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e10.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e10</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e10</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-10</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e10 --(End)-->
+			
+			<!--  ts-3_returns_s1_e11 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e11.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1sQMC7_Vc2Vl5mdcttOiIuyDOu7YJiuxX?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e11.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e11</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e11</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-11</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e11 --(End)-->
+			
+			<!--  ts-3_returns_s1_e12 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e12.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1EsCYup8aBiZvA3VLRMSYEjDFksj_vfqH?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e12.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e12</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e12</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-12</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e12 --(End)-->
+			
+			<!--  ts-3_returns_s1_e13 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e13.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1C9BFDcFMqMaWMpQL0Y0jzdlFrIXShTNe?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e13.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e13</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e13</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-13</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e13 --(End)-->
+			
+			<!--  ts-3_returns_s1_e14 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e14.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ijbLI-86OaDiGWna8wIWBQF24O3bcktT?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e14.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e14</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e14</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-14</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e14 --(End)-->
+			
+			<!--  ts-3_returns_s1_e15 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e15.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ITm8zzv7M-ReMUIQ1L059jI_5a2xL3ee?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e15.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e15</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e15</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-15</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e15 --(End)-->
+			
+			<!--  ts-3_returns_s1_e16 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e16.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1R4jtSaLZJVH1ZWHaKm1F-ZX6JPeANeSr?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e16.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e16</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e16</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-16</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e16 --(End)-->
+			
+			<!--  ts-3_returns_s1_e17 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e17.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1H_ZcI2lHM-5BFRYuS1i9tUb3GbWCGgZU?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e17.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e17</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e17</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-17</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e17 --(End)-->
+			
+			<!--  ts-3_returns_s1_e18 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e18.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/10H3CljiyXgwpbwwof4A9wf6HtVud7Mko?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e18.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e18</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e18</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-18</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e18 --(End)-->
+			
+			<!--  ts-3_returns_s1_e19 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e19.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1jnRFg-j2EujbzDq8zS64dc0Uqvqd5rkp?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e19.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e19</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e19</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-19</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e19 --(End)-->
+			
+			<!--  ts-3_returns_s1_e20 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e20.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1dujuW9nGp9pLCdRHxuiPp67UPYnlzdMz?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e20.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e20</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e20</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-20</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e20 --(End)-->
+			
+			<!--  ts-3_returns_s1_e21 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e21.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ns_x0D33klyOqbRoGzoP64e3cCcBfYRu?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e21.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e21</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e21</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-21</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e21 --(End)-->
+			
+			<!--  ts-3_returns_s1_e22 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e22.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1VecALftGOavuwW3sw838EqgHBVuQOBqI?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e22.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e22</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e22</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-22</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e22 --(End)-->
+			
+			<!--  ts-3_returns_s1_e23 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e23.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1T9OFCoOX7lQd0HWCgIfr7dngPW19i6TO?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e23.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e23</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e23</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-23</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e23 --(End)-->
+			
+			<!--  ts-3_returns_s1_e24 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e24.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1f3A6AyzOyOAGarNXb2jsa4DQOyzc__-p?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e24.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e24</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e24</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-24</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e24 --(End)-->
+			
+			<!--  ts-3_returns_s1_e25 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e25.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1bVphWwaIJHXAbFhGNsJRKMiiDPElP2Wu?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e25.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e25</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e25</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-25</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e25 --(End)-->
+			
+			<!--  ts-3_returns_s1_e26 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e26.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1QD1_XogmwUiusbifZL-2tQHbilbGYjai?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes/ts-3_returns_s1_e26.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s1 e26</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s1 e26</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-1 Episode-26</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s1_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s1_e26 --(End)-->
+			
+		</ul>
+		<!--  ts-3_returns_s1 all --(End)-->
+		
+		<!--  ts-3_returns_s2 all --(Start)-->
+		<ul id="ts-3_returns_s2" style="display:none;">
+			
+			<!--  ts-3_returns_s2_e1 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e1.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1dij76eArOWIGH9tYUCYbM9ylzEls0Y-Z?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e1.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e1</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e1</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-1</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e1 --(End)-->
+			
+			<!--  ts-3_returns_s2_e2 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e2.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Z7CVK-cc8YoCtvfHcMc9ORMYPg-XhaxS?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e2.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e2</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e2</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-2</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e2 --(End)-->
+			
+			<!--  ts-3_returns_s2_e3 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e3.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1SfvWZjdeHYBxMTqCuQrEvvhIgkEHHPTS?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e3.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e3</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e3</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-3</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e3 --(End)-->
+			
+			<!--  ts-3_returns_s2_e4 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e4.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1dmgLaSKK-ERd-qbtUr1QqWOvsWCifHWI?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e4.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e4</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e4</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-4</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e4 --(End)-->
+			
+			<!--  ts-3_returns_s2_e5 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e5.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1XoQCx4Dd5iOkLfMueMoliZW7CCPrZ_kZ?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e5.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e5</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e5</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-5</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e5 --(End)-->
+			
+			<!--  ts-3_returns_s2_e6 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e6.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Np4fMjHSQuTZrOMXYuQ6b5wnZz-xAxs6?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e6.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e6</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e6</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-6</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e6 --(End)-->
+			
+			<!--  ts-3_returns_s2_e7 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e7.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/13oNvL2wESI9rL1r4sfG1kv9L0xgx8Kos?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e7.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e7</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e7</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-7</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e7 --(End)-->
+			
+			<!--  ts-3_returns_s2_e8 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e8.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1EOuqC-9K-M5uG5Hrexi2q9lykrFKQjov?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e8.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e8</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e8</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-8</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e8 --(End)-->
+			
+			<!--  ts-3_returns_s2_e9 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e9.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1SgpE9owmha9VXXS7mCY4gbYYHqW_NPMs?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e9.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e9</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e9</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-9</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e9 --(End)-->
+			
+			<!--  ts-3_returns_s2_e10 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e10.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1TwywJAkdnRSIxBznY-GKYB-B69pWImU8?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e10.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e10</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e10</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-10</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e10 --(End)-->
+			
+			<!--  ts-3_returns_s2_e11 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e11.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1M74lOPzaJw4ZNCST-ZoeaEWqzpklWNTq?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e11.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e11</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e11</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-11</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e11 --(End)-->
+			
+			<!--  ts-3_returns_s2_e12 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e12.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ZJpw86h2rGfGhGlDbBi01Bm1DGd20WHF?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e12.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e12</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e12</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-12</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e12 --(End)-->
+			
+			<!--  ts-3_returns_s2_e13 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e13.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/187YtA9FtTvjwLBhoZVG46XC6paUu5McD?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e13.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e13</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e13</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-13</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e13 --(End)-->
+			
+			<!--  ts-3_returns_s2_e14 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e14.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ijPclUuV4cu-CE8-nNVXDoBXLkN53lo6?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e14.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e14</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e14</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-14</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e14 --(End)-->
+			
+			<!--  ts-3_returns_s2_e15 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e15.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1wttmLnnya5Wf25Px0pPyOIicdS6MxeTb?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e15.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e15</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e15</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-15</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e15 --(End)-->
+			
+			<!--  ts-3_returns_s2_e16 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e16.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/18PTrz0LzJHqJw5S22YzczjYyXQBeOfFP?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e16.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e16</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e16</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-16</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e16 --(End)-->
+			
+			<!--  ts-3_returns_s2_e17 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e17.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1s-JTXRMSt-8DC927IIiD9415GwwJRUvj?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e17.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e17</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e17</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-17</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e17 --(End)-->
+			
+			<!--  ts-3_returns_s2_e18 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e18.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Y8Q-yS-CvBM6h_nSwaNQyKrTQdNTGtRM?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e18.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e18</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e18</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-18</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e18 --(End)-->
+			
+			<!--  ts-3_returns_s2_e19 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e19.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1kAofmPfLQk2KF4O7WGfmfjHTu2Qx7QHY?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e19.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e19</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e19</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-19</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e19 --(End)-->
+			
+			<!--  ts-3_returns_s2_e20 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e20.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1yM3a1dMGM5A6zugzD4O2dEZCYqq3OOIH?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e20.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e20</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e20</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-20</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e20 --(End)-->
+			
+			<!--  ts-3_returns_s2_e21 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e21.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1jwnqF1ftJnAIJBkOCX-CDmTSEGchfgr1?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e21.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e21</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e21</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-21</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e21 --(End)-->
+			
+			<!--  ts-3_returns_s2_e22 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e22.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1bPvxKJS7kyMRCctLq6prPuYCi6QHBKZ7?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e22.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e22</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e22</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-22</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e22 --(End)-->
+			
+			<!--  ts-3_returns_s2_e23 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e23.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ay0qt-KDRLCLBUGf0MJuS-yAiGWtE8vF?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e23.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e23</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e23</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-23</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e23 --(End)-->
+			
+			<!--  ts-3_returns_s2_e24 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e24.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1YL9EnC_76pU-tdnE6r4aZz1uu8rz5Unv?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e24.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e24</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e24</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-24</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e24 --(End)-->
+			
+			<!--  ts-3_returns_s2_e25 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e25.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1TfR67efm81mera0MFdJwHwLpPwbr-GAI?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e25.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e25</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e25</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-25</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e25 --(End)-->
+			
+			<!--  ts-3_returns_s2_e26 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e26.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1YQhDa0QidSID1R5-fBoXynCa37cLggVp?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes/ts-3_returns_s2_e26.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-3(returns) s2 e26</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-3(returns) s2 e26</p>
+						<p class="fwduvp-video-main-description">You are watching Ninja-hattori [RETURNS] Season-2 Episode-26</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-3/ts-3_all-seasons/returns/ts-3_returns_s2_all-episodes.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-3_returns_s2_e26 --(End)-->
+			
+		</ul>
+		<!--  ts-3_returns_s2 all --(End)-->
+		
+		<!--  NO CONTENT --(Start)-->
+		<ul id="no-content" style="display:none;">
+			
+			<!--  NO CONTENT INSIDE --(Start)-->
+			<li data-thumb-source="../../../images/waiting.gif" data-video-source="content/no-video.mp4" data-poster-source="../../../images/waiting.gif" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Listen..</p>
+						<p class="fwduvp-thumbnail-description">This content is unavailable.</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">!! Attention !!</p>
+						<p class="fwduvp-video-main-description">You are opening a content which is NOT AVAILABLE..</p>
+					</div>
+				</div>
+			</li>
+			<!--  NO CONTENT INSIDE --(End)-->
+			
+		</ul>
+		<!--  NO CONTENT --(End)-->
+		
+	</body>
+</html>

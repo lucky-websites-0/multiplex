@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="Multiplex - Private Theatre Hall" />
+		<meta name="description" content="Multiplex - Private Theatre Hall" />
+		<meta name="author" content="Multiplex" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Multiplex - Private Theatre Hall</title>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="../../../images/favicon.png">
+		
+		<link rel="stylesheet" type="text/css"  href="content/global.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+		
+		<script type="text/javascript" src="content/java/FWDUVPlayer.js"></script>
+		
+		<!-- Setup video player-->
+		<script type="text/javascript">
+			FWDUVPUtils.onReady(function(){
+				
+				
+				const searchParams = new URLSearchParams(window.location.search);
+				
+				const moviesplaylist = searchParams.get('mp');
+				const moviesplaylistIndex = (moviesplaylist) ? (Number(moviesplaylist) - 1).toString() : moviesplaylist;
+				
+				const movieValue = searchParams.get('m');
+				const movieValueIndex = (movieValue) ? (Number(movieValue) - 1).toString() : movieValue;
+				
+				
+				new FWDUVPlayer({		
+					//main settings
+					instanceName:"player1",
+					parentId:"myDiv",
+					playlistsId:"playlists",
+					mainFolderPath:"content",
+					skinPath:"modern_skin_dark",
+					displayType:"fullscreen",
+					initializeOnlyWhenVisible:"no",
+					fillEntireposterScreen:"yes",
+					useVectorIcons:"no",
+					fillEntireVideoScreen:"no",
+					goFullScreenOnButtonPlay:"no",
+					playsinline:"yes",
+					privateVideoPassword:"lucky",
+					youtubeAPIKey:"",
+					useHEXColorsForSkin:"no",
+					normalHEXButtonsColor:"#666666",
+					googleAnalyticsTrackingCode:"",
+					useResumeOnPlay:"no",
+					useDeepLinking:"yes",
+					showPreloader:"yes",
+					preloaderBackgroundColor:"#000000",
+					preloaderFillColor:"#FFFFFF",
+					addKeyboardSupport:"yes",
+					autoScale:"yes",
+					showButtonsToolTip:"yes", 
+					stopVideoWhenPlayComplete:"no",
+					playAfterVideoStop:"no",
+					autoPlay:"yes",
+					autoPlayText:"Click To Unmute",
+					loop:"no",
+					shuffle:"no",
+					showErrorInfo:"yes",
+					maxWidth:980,
+					maxHeight:552,
+					volume:.8,
+					rewindTime:10,
+					buttonsToolTipHideDelay:1.5,
+					backgroundColor:"#000000",
+					videoBackgroundColor:"#000000",
+					posterBackgroundColor:"#000000",
+					buttonsToolTipFontColor:"#5a5a5a",
+					//logo settings
+					showLogo:"yes",
+					logoPath:"content/modern_skin_dark/logo.png",
+					hideLogoWithController:"yes",
+					logoPosition:"topRight",
+					logoLink:"../../../index.html",
+					logoMargins:10,
+					//playlists/categories settings
+					showPlaylistsSearchInput:"yes",
+					usePlaylistsSelectBox:"yes",
+					showPlaylistsButtonAndPlaylists:"yes",
+					showPlaylistsByDefault:"no",
+					thumbnailSelectedType:"opacity",
+					startAtPlaylist:moviesplaylistIndex,
+					buttonsMargins:15,
+					thumbnailMaxWidth:350, 
+					thumbnailMaxHeight:350,
+					horizontalSpaceBetweenThumbnails:40,
+					verticalSpaceBetweenThumbnails:40,
+					inputBackgroundColor:"#333333",
+					inputColor:"#999999",
+					//playlist settings
+					showPlaylistButtonAndPlaylist:"yes",
+					playlistPosition:"right",
+					showPlaylistByDefault:"no",
+					showPlaylistName:"yes",
+					showSearchInput:"yes",
+					showLoopButton:"yes",
+					showShuffleButton:"yes",
+					showPlaylistOnFullScreen:"yes",
+					showNextAndPrevButtons:"yes",
+					showThumbnail:"yes",
+					showOnlyThumbnail:"no",
+					forceDisableDownloadButtonForFolder:"yes",
+					addMouseWheelSupport:"yes", 
+					startAtRandomVideo:"no",
+					stopAfterLastVideoHasPlayed:"no",
+					addScrollOnMouseMove:"yes",
+					randomizePlaylist:'no',
+					folderVideoLabel:"VIDEO ",
+					playlistRightWidth:290,
+					playlistBottomHeight:380,
+					startAtVideo:movieValueIndex,
+					maxPlaylistItems:50000,
+					thumbnailWidth:71,
+					thumbnailHeight:71,
+					spaceBetweenControllerAndPlaylist:1,
+					spaceBetweenThumbnails:1,
+					scrollbarOffestWidth:8,
+					scollbarSpeedSensitivity:.5,
+					playlistBackgroundColor:"#000000",
+					playlistNameColor:"#FFFFFF",
+					thumbnailNormalBackgroundColor:"#1b1b1b",
+					thumbnailHoverBackgroundColor:"#313131",
+					thumbnailDisabledBackgroundColor:"#272727",
+					searchInputBackgroundColor:"#000000",
+					searchInputColor:"#999999",
+					youtubeAndFolderVideoTitleColor:"#FFFFFF",
+					folderAudioSecondTitleColor:"#999999",
+					youtubeOwnerColor:"#888888",
+					youtubeDescriptionColor:"#888888",
+					mainSelectorBackgroundSelectedColor:"#FFFFFF",
+					mainSelectorTextNormalColor:"#FFFFFF",
+					mainSelectorTextSelectedColor:"#000000",
+					mainButtonBackgroundNormalColor:"#212021",
+					mainButtonBackgroundSelectedColor:"#FFFFFF",
+					mainButtonTextNormalColor:"#FFFFFF",
+					mainButtonTextSelectedColor:"#000000",
+					//controller settings
+					showController:"yes",
+					showControllerWhenVideoIsStopped:"yes",
+					showNextAndPrevButtonsInController:"no",
+					showRewindButton:"no",
+					showPlaybackRateButton:"yes",
+					showVolumeButton:"yes",
+					showTime:"yes",
+					showQualityButton:"yes",
+					showInfoButton:"yes",
+					showDownloadButton:"no",
+					showShareButton:"no",
+					showEmbedButton:"no",
+					showChromecastButton:"no",
+					showFullScreenButton:"yes",
+					disableVideoScrubber:"no",
+					showScrubberWhenControllerIsHidden:"yes",
+					showMainScrubberToolTipLabel:"yes",
+					showDefaultControllerForVimeo:"yes",
+					repeatBackground:"yes",
+					controllerHeight:43,
+					controllerHideDelay:3,
+					startSpaceBetweenButtons:10,
+					spaceBetweenButtons:10,
+					scrubbersOffsetWidth:2,
+					mainScrubberOffestTop:17,
+					timeOffsetLeftWidth:2,
+					timeOffsetRightWidth:2,
+					timeOffsetTop:-1,
+					volumeScrubberHeight:80,
+					volumeScrubberOfsetHeight:20,
+					timeColor:"#888888",
+					youtubeQualityButtonNormalColor:"#888888",
+					youtubeQualityButtonSelectedColor:"#FFFFFF",
+					scrubbersToolTipLabelBackgroundColor:"#FFFFFF",
+					scrubbersToolTipLabelFontColor:"#5a5a5a",
+					//advertisement on pause window
+					aopwTitle:"Advertisement",
+					aopwWidth:400,
+					aopwHeight:240,
+					aopwBorderSize:6,
+					aopwTitleColor:"#FFFFFF",
+					//subtitle
+					subtitlesOffLabel:"Subtitle off",
+					//popup add windows
+					showPopupAdsCloseButton:"yes",
+					//embed window and info window
+					embedAndInfoWindowCloseButtonMargins:15,
+					borderColor:"#333333",
+					mainLabelsColor:"#FFFFFF",
+					secondaryLabelsColor:"#a1a1a1",
+					shareAndEmbedTextColor:"#5a5a5a",
+					inputBackgroundColor:"#000000",
+					inputColor:"#FFFFFF",
+					//login
+		            playIfLoggedIn:"no",
+		            playIfLoggedInMessage:"Please <a href='https://google.com' target='_blank'>login</a> to play this video.",
+					//audio visualizer
+					audioVisualizerLinesColor:"#0099FF",
+					audioVisualizerCircleColor:"#FFFFFF",
+					//lightbox settings
+					closeLightBoxWhenPlayComplete:"no",
+					lightBoxBackgroundOpacity:.6,
+					lightBoxBackgroundColor:"#000000",
+					//sticky on scroll
+					stickyOnScroll:"no",
+					stickyOnScrollShowOpener:"yes",
+					stickyOnScrollWidth:"700",
+					stickyOnScrollHeight:"394",
+					//sticky display settings
+					showOpener:"yes",
+					showOpenerPlayPauseButton:"yes",
+					verticalPosition:"bottom",
+					horizontalPosition:"center",
+					showPlayerByDefault:"yes",
+					animatePlayer:"yes",
+					openerAlignment:"right",
+					mainBackgroundImagePath:"content/modern_skin_dark/main-background.png",
+					openerEqulizerOffsetTop:-1,
+					openerEqulizerOffsetLeft:3,
+					offsetX:0,
+					offsetY:0,
+					//playback rate / speed
+					defaultPlaybackRate:1, //0.25, 0.5, 1, 1.25, 1.2, 2
+					//cuepoints
+					executeCuepointsOnlyOnce:"no",
+					//annotations
+					showAnnotationsPositionTool:"no",
+					//ads
+					openNewPageAtTheEndOfTheAds:"no",
+					adsButtonsPosition:"left",
+					skipToVideoText:"You can skip to video in: ",
+					skipToVideoButtonText:"Skip Ad",
+					adsTextNormalColor:"#888888",
+					adsTextSelectedColor:"#FFFFFF",
+					adsBorderNormalColor:"#444444",
+					adsBorderSelectedColor:"#FFFFFF",
+					//a to b loop
+					useAToB:"yes",
+					atbTimeBackgroundColor:"transparent",
+					atbTimeTextColorNormal:"#888888",
+					atbTimeTextColorSelected:"#FFFFFF",
+					atbButtonTextNormalColor:"#888888",
+					atbButtonTextSelectedColor:"#FFFFFF",
+					atbButtonBackgroundNormalColor:"#FFFFFF",
+					atbButtonBackgroundSelectedColor:"#000000",
+					//thumbnails preview
+					thumbnailsPreviewWidth:196,
+					thumbnailsPreviewHeight:110,
+					thumbnailsPreviewBackgroundColor:"#000000",
+					thumbnailsPreviewBorderColor:"#666",
+					thumbnailsPreviewLabelBackgroundColor:"#666",
+					thumbnailsPreviewLabelFontColor:"#FFF",
+					// context menu
+					showContextmenu:'yes',
+					showScriptDeveloper:"no",
+					contextMenuBackgroundColor:"#1f1f1f",
+					contextMenuBorderColor:"#1f1f1f",
+					contextMenuSpacerColor:"#333",
+					contextMenuItemNormalColor:"#666666",
+					contextMenuItemSelectedColor:"#FFFFFF",
+					contextMenuItemDisabledColor:"#333"
+				});
+			});
+		</script>
+		
+		<!-- the below line prevent any of its link to open inside iframe, when this page is used inside an iframe in other pages.... --> 
+		<base target="_PARENT">
+		
+	</head>
+	
+	<body style="background-color:#999999; padding:0px; margin:0px;">	
+		
+		<div id="myDiv" style="position:relative; left:0px; top:0px;"></div>
+		
+		<!--  ts-1 all --(Start)-->
+		<ul id="playlists" style="display:none;">
+			
+			<li data-source="ts-1_m" data-playlist-name="TS-1 MOVIES" data-thumbnail-path="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_all-movies.jpeg">
+				<p class="fwduvp-categories-title"><span class="fwduvp-header">Title: </span><span class="fwduvp-title">TS-1 ALL MOVIES</span></p>
+				<p class="fwduvp-categories-type"><span class="fwduvp-header">Type: </span>MOVIE</p>
+				<p class="fwduvp-categories-description"><span class="fwduvp-header">Description: </span><strong>Click to watch</strong> all its movies.</p>
+			</li>
+			
+		</ul>
+		<!--  ts-1 all --(End)-->
+		
+		<!--  ts-1_m all --(Start)-->
+		<ul id="ts-1_m" style="display:none;">
+			
+			<!--  ts-1_movie-1 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-1.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1pC9LWoOy1JzrdJFZMbWrgBvq-R_tpuCa?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-1.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-1</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-1</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-1</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-1 --(End)-->
+			
+			<!--  ts-1_movie-2 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-2.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1mRAee2VIgxMGSreKncViRz_0kxh1jAWa?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-2.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-2</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-2</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-2</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-2 --(End)-->
+			
+			<!--  ts-1_movie-3 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-3.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Bg6qR4yLamHis_XhucqCgfQrSEcySQ49?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-3.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-3</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-3</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-3</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-3 --(End)-->
+			
+			<!--  ts-1_movie-4 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-4.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1GcGYkSnkX1UJ5xb0_-CVmR41Kb_rov76?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-4.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-4</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-4</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-4</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-4 --(End)-->
+			
+			<!--  ts-1_movie-5 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-5.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Pghk229zHAizsXltUslXVVcoJHfYTMRv?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-5.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-5</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-5</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-5</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-5 --(End)-->
+			
+			<!--  ts-1_movie-6 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-6.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1TqHa_NKsMdzTb8_lbop43FXggNF-JQdA?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-6.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-6</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-6</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-6</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-6 --(End)-->
+			
+			<!--  ts-1_movie-7 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-7.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1_i1AblvVXWNkIFOMhsfjLNDlxne9jQ9D?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-7.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-7</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-7</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-7</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-7 --(End)-->
+			
+			<!--  ts-1_movie-8 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-8.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1FB_Y64HhD17kdzW4W7cfzmHUe6cdk2VZ?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-8.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-8</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-8</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-8</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-8 --(End)-->
+			
+			<!--  ts-1_movie-9 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-9.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Hg2JqYaQAQjqldkdsJPIrhIjVt7w3dEW?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-9.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-9</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-9</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-9</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-9 --(End)-->
+			
+			<!--  ts-1_movie-10 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-10.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1kR3Frx7Jq_1Jq52CaLGyv0g3kL1ghJi4?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-10.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-10</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-10</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-10</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-10 --(End)-->
+			
+			<!--  ts-1_movie-11 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-11.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1lt4HD3sAem5VCLBR1T925uw0NaZjCaMU?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-11.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-11</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-11</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-11</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-11 --(End)-->
+			
+			<!--  ts-1_movie-12 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-12.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1QLn9uOXrn_Dqm4ZSqy9naMSVrXY9IsfA?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-12.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-12</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-12</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-12</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-12 --(End)-->
+			
+			<!--  ts-1_movie-13 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-13.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1O19ZibWWiE3Cny3qnaaNBUB2JQBkKjVH?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-13.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-13</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-13</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-13</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-13 --(End)-->
+			
+			<!--  ts-1_movie-14 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-14.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1adrnOEMZHxb-Y4gE79by9FWE4lkJ3zFd?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-14.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-14</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-14</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-14</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-14 --(End)-->
+			
+			<!--  ts-1_movie-15 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-15.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1qpqze_TqeByGtuYre9n4JgcXmYhZkRaF?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-15.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-15</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-15</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-15</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-15 --(End)-->
+			
+			<!--  ts-1_movie-16 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-16.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1oUkYL7JtQmkQD41uDTi-gVKQDmzArIFh?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-16.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-16</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-16</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-16</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-16 --(End)-->
+			
+			<!--  ts-1_movie-17 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-17.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/14tKUvulNd1c_TDhBQ2bCgOAGCr24htQs?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-17.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-17</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-17</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-17</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-17 --(End)-->
+			
+			<!--  ts-1_movie-18 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-18.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1mzxcMxCX6bVowAqfEg5K_aQkAFtnja39?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-18.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-18</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-18</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-18</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-18 --(End)-->
+			
+			<!--  ts-1_movie-19 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-19.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1bePryvR9b4VMqP1wV6sw9ZDq4yaDJxva?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-19.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-19</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-19</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-19</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-19 --(End)-->
+			
+			<!--  ts-1_movie-20 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-20.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1e5AnNlOkvxtpbgvPexvdBJha_Kg7bums?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-20.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-20</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-20</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-20</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-20 --(End)-->
+			
+			<!--  ts-1_movie-21 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-21.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Y20BP3WaaQ6s63csKwwgndJBVFSK57Nc?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-21.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-21</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-21</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-21</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-21 --(End)-->
+			
+			<!--  ts-1_movie-22 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-22.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1qTkccH0SjZ_Az71lcj5RNHOBJwRBaa2u?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-22.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-22</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-22</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-22</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-22 --(End)-->
+			
+			<!--  ts-1_movie-23 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-23.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1fjC2wbGZ_JgiD-VgghjcQC3g_vb8yDBz?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-23.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-23</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-23</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-23</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-23 --(End)-->
+			
+			<!--  ts-1_movie-24 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-24.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1z1aqyc-bwnoFgtye21rqkCGmDn9OGJ9E?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-24.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-24</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-24</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-24</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-24 --(End)-->
+			
+			<!--  ts-1_movie-25 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-25.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1o4D-KXaPtj6ni0Lv9G0fIjE76qCwmVJV?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-25.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-25</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-25</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-25</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-25 --(End)-->
+			
+			<!--  ts-1_movie-26 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-26.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1iliJpn1liIPhupPZTVNZ3G1dJgmFaP5b?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-26.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-26</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-26</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-26</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-26 --(End)-->
+			
+			<!--  ts-1_movie-27 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-27.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1TqLNJPU731v4j6FSX49CYl5F2xekWxd-?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-27.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-27</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-27</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-27</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-27 --(End)-->
+			
+			<!--  ts-1_movie-28 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-28.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1CRSNNNd8vRCZn_WGTcYvzPIm32pt56dO?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-28.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-28</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-28</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-28</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-28 --(End)-->
+			
+			<!--  ts-1_movie-29 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-29.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1a_lrsKnBBVjLTfaoQQPLZr5c-kC3IIlF?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-29.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-29</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-29</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-29</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-29 --(End)-->
+			
+			<!--  ts-1_movie-30 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-30.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1tviWrgQFXK07OMniJLkhhD8hGnPHCTMc?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-30.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-30</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-30</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-30</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-30 --(End)-->
+			
+			<!--  ts-1_movie-31 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-31.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/181-uBZOXkeJQOvq6I-Av5mZmkHOva9FP?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-31.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-31</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-31</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-31</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-31 --(End)-->
+			
+			<!--  ts-1_movie-32 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-32.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1uu4aI77dTZaAI17ECmPWHdNsTIi_NC7S?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-32.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-32</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-32</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-32</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-32 --(End)-->
+			
+			<!--  ts-1_movie-33 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-33.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1vF6_JCXEU3Lq99maO9MbIJrUCrdrSBSw?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-33.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-33</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-33</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-33</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-33 --(End)-->
+			
+			<!--  ts-1_movie-34 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-34.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/17Zf_m_AxZSRraTNTMahKtv2hR9N6P3eg?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-34.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-34</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-34</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-34</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-34 --(End)-->
+			
+			<!--  ts-1_movie-35 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-35.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1QgEz035V8B7DKkmpc_W_z7WjPq3c8aMm?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-1/ts-1_all-movies/ts-1_movie-35.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">ts-1 movie-35</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Movie..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">ts-1 movie-35</p>
+						<p class="fwduvp-video-main-description">You are watching Doraemon Movie-35</p>
+						<p class="fwduvp-link">For more information about this.. <a href="../../tv-show-1/ts-1_all-movies.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-1_movie-35 --(End)-->
+			
+		</ul>
+		<!--  ts-1_m all --(End)-->
+		
+		<!--  NO CONTENT --(Start)-->
+		<ul id="no-content" style="display:none;">
+			
+			<!--  NO CONTENT INSIDE --(Start)-->
+			<li data-thumb-source="../../../images/waiting.gif" data-video-source="content/no-video.mp4" data-poster-source="../../../images/waiting.gif" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Listen..</p>
+						<p class="fwduvp-thumbnail-description">This content is unavailable.</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">!! Attention !!</p>
+						<p class="fwduvp-video-main-description">You are opening a content which is NOT AVAILABLE..</p>
+					</div>
+				</div>
+			</li>
+			<!--  NO CONTENT INSIDE --(End)-->
+			
+		</ul>
+		<!--  NO CONTENT --(End)-->
+		
+	</body>
+</html>

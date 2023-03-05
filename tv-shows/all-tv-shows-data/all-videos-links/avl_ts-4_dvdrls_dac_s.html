@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="Multiplex - Private Theatre Hall" />
+		<meta name="description" content="Multiplex - Private Theatre Hall" />
+		<meta name="author" content="Multiplex" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Multiplex - Private Theatre Hall</title>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="../../../images/favicon.png">
+		
+		<link rel="stylesheet" type="text/css"  href="content/global.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+		
+		<script type="text/javascript" src="content/java/FWDUVPlayer.js"></script>
+		
+		<!-- Setup video player-->
+		<script type="text/javascript">
+			FWDUVPUtils.onReady(function(){
+				
+				
+				const searchParams = new URLSearchParams(window.location.search);
+				
+				const seasonValue = searchParams.get('s');
+				const seasonValueIndex = (seasonValue) ? (Number(seasonValue) - 1).toString() : seasonValue;
+				
+				const episodeValue = searchParams.get('e');
+				const episodeValueIndex = (episodeValue) ? (Number(episodeValue) - 1).toString() : episodeValue;
+				
+				
+				new FWDUVPlayer({		
+					//main settings
+					instanceName:"player1",
+					parentId:"myDiv",
+					playlistsId:"playlists",
+					mainFolderPath:"content",
+					skinPath:"modern_skin_dark",
+					displayType:"fullscreen",
+					initializeOnlyWhenVisible:"no",
+					fillEntireposterScreen:"yes",
+					useVectorIcons:"no",
+					fillEntireVideoScreen:"no",
+					goFullScreenOnButtonPlay:"no",
+					playsinline:"yes",
+					privateVideoPassword:"lucky",
+					youtubeAPIKey:"",
+					useHEXColorsForSkin:"no",
+					normalHEXButtonsColor:"#666666",
+					googleAnalyticsTrackingCode:"",
+					useResumeOnPlay:"no",
+					useDeepLinking:"yes",
+					showPreloader:"yes",
+					preloaderBackgroundColor:"#000000",
+					preloaderFillColor:"#FFFFFF",
+					addKeyboardSupport:"yes",
+					autoScale:"yes",
+					showButtonsToolTip:"yes", 
+					stopVideoWhenPlayComplete:"no",
+					playAfterVideoStop:"no",
+					autoPlay:"yes",
+					autoPlayText:"Click To Unmute",
+					loop:"no",
+					shuffle:"no",
+					showErrorInfo:"yes",
+					maxWidth:980,
+					maxHeight:552,
+					volume:.8,
+					rewindTime:10,
+					buttonsToolTipHideDelay:1.5,
+					backgroundColor:"#000000",
+					videoBackgroundColor:"#000000",
+					posterBackgroundColor:"#000000",
+					buttonsToolTipFontColor:"#5a5a5a",
+					//logo settings
+					showLogo:"yes",
+					logoPath:"content/modern_skin_dark/logo.png",
+					hideLogoWithController:"yes",
+					logoPosition:"topRight",
+					logoLink:"../../../index.html",
+					logoMargins:10,
+					//playlists/categories settings
+					showPlaylistsSearchInput:"yes",
+					usePlaylistsSelectBox:"yes",
+					showPlaylistsButtonAndPlaylists:"yes",
+					showPlaylistsByDefault:"no",
+					thumbnailSelectedType:"opacity",
+					startAtPlaylist:seasonValueIndex,
+					buttonsMargins:15,
+					thumbnailMaxWidth:350, 
+					thumbnailMaxHeight:350,
+					horizontalSpaceBetweenThumbnails:40,
+					verticalSpaceBetweenThumbnails:40,
+					inputBackgroundColor:"#333333",
+					inputColor:"#999999",
+					//playlist settings
+					showPlaylistButtonAndPlaylist:"yes",
+					playlistPosition:"right",
+					showPlaylistByDefault:"no",
+					showPlaylistName:"yes",
+					showSearchInput:"yes",
+					showLoopButton:"yes",
+					showShuffleButton:"yes",
+					showPlaylistOnFullScreen:"yes",
+					showNextAndPrevButtons:"yes",
+					showThumbnail:"yes",
+					showOnlyThumbnail:"no",
+					forceDisableDownloadButtonForFolder:"yes",
+					addMouseWheelSupport:"yes", 
+					startAtRandomVideo:"no",
+					stopAfterLastVideoHasPlayed:"no",
+					addScrollOnMouseMove:"yes",
+					randomizePlaylist:'no',
+					folderVideoLabel:"VIDEO ",
+					playlistRightWidth:290,
+					playlistBottomHeight:380,
+					startAtVideo:episodeValueIndex,
+					maxPlaylistItems:50000,
+					thumbnailWidth:71,
+					thumbnailHeight:71,
+					spaceBetweenControllerAndPlaylist:1,
+					spaceBetweenThumbnails:1,
+					scrollbarOffestWidth:8,
+					scollbarSpeedSensitivity:.5,
+					playlistBackgroundColor:"#000000",
+					playlistNameColor:"#FFFFFF",
+					thumbnailNormalBackgroundColor:"#1b1b1b",
+					thumbnailHoverBackgroundColor:"#313131",
+					thumbnailDisabledBackgroundColor:"#272727",
+					searchInputBackgroundColor:"#000000",
+					searchInputColor:"#999999",
+					youtubeAndFolderVideoTitleColor:"#FFFFFF",
+					folderAudioSecondTitleColor:"#999999",
+					youtubeOwnerColor:"#888888",
+					youtubeDescriptionColor:"#888888",
+					mainSelectorBackgroundSelectedColor:"#FFFFFF",
+					mainSelectorTextNormalColor:"#FFFFFF",
+					mainSelectorTextSelectedColor:"#000000",
+					mainButtonBackgroundNormalColor:"#212021",
+					mainButtonBackgroundSelectedColor:"#FFFFFF",
+					mainButtonTextNormalColor:"#FFFFFF",
+					mainButtonTextSelectedColor:"#000000",
+					//controller settings
+					showController:"yes",
+					showControllerWhenVideoIsStopped:"yes",
+					showNextAndPrevButtonsInController:"no",
+					showRewindButton:"no",
+					showPlaybackRateButton:"yes",
+					showVolumeButton:"yes",
+					showTime:"yes",
+					showQualityButton:"yes",
+					showInfoButton:"yes",
+					showDownloadButton:"no",
+					showShareButton:"no",
+					showEmbedButton:"no",
+					showChromecastButton:"no",
+					showFullScreenButton:"yes",
+					disableVideoScrubber:"no",
+					showScrubberWhenControllerIsHidden:"yes",
+					showMainScrubberToolTipLabel:"yes",
+					showDefaultControllerForVimeo:"yes",
+					repeatBackground:"yes",
+					controllerHeight:43,
+					controllerHideDelay:3,
+					startSpaceBetweenButtons:10,
+					spaceBetweenButtons:10,
+					scrubbersOffsetWidth:2,
+					mainScrubberOffestTop:17,
+					timeOffsetLeftWidth:2,
+					timeOffsetRightWidth:2,
+					timeOffsetTop:-1,
+					volumeScrubberHeight:80,
+					volumeScrubberOfsetHeight:20,
+					timeColor:"#888888",
+					youtubeQualityButtonNormalColor:"#888888",
+					youtubeQualityButtonSelectedColor:"#FFFFFF",
+					scrubbersToolTipLabelBackgroundColor:"#FFFFFF",
+					scrubbersToolTipLabelFontColor:"#5a5a5a",
+					//advertisement on pause window
+					aopwTitle:"Advertisement",
+					aopwWidth:400,
+					aopwHeight:240,
+					aopwBorderSize:6,
+					aopwTitleColor:"#FFFFFF",
+					//subtitle
+					subtitlesOffLabel:"Subtitle off",
+					//popup add windows
+					showPopupAdsCloseButton:"yes",
+					//embed window and info window
+					embedAndInfoWindowCloseButtonMargins:15,
+					borderColor:"#333333",
+					mainLabelsColor:"#FFFFFF",
+					secondaryLabelsColor:"#a1a1a1",
+					shareAndEmbedTextColor:"#5a5a5a",
+					inputBackgroundColor:"#000000",
+					inputColor:"#FFFFFF",
+					//login
+		            playIfLoggedIn:"no",
+		            playIfLoggedInMessage:"Please <a href='https://google.com' target='_blank'>login</a> to play this video.",
+					//audio visualizer
+					audioVisualizerLinesColor:"#0099FF",
+					audioVisualizerCircleColor:"#FFFFFF",
+					//lightbox settings
+					closeLightBoxWhenPlayComplete:"no",
+					lightBoxBackgroundOpacity:.6,
+					lightBoxBackgroundColor:"#000000",
+					//sticky on scroll
+					stickyOnScroll:"no",
+					stickyOnScrollShowOpener:"yes",
+					stickyOnScrollWidth:"700",
+					stickyOnScrollHeight:"394",
+					//sticky display settings
+					showOpener:"yes",
+					showOpenerPlayPauseButton:"yes",
+					verticalPosition:"bottom",
+					horizontalPosition:"center",
+					showPlayerByDefault:"yes",
+					animatePlayer:"yes",
+					openerAlignment:"right",
+					mainBackgroundImagePath:"content/modern_skin_dark/main-background.png",
+					openerEqulizerOffsetTop:-1,
+					openerEqulizerOffsetLeft:3,
+					offsetX:0,
+					offsetY:0,
+					//playback rate / speed
+					defaultPlaybackRate:1, //0.25, 0.5, 1, 1.25, 1.2, 2
+					//cuepoints
+					executeCuepointsOnlyOnce:"no",
+					//annotations
+					showAnnotationsPositionTool:"no",
+					//ads
+					openNewPageAtTheEndOfTheAds:"no",
+					adsButtonsPosition:"left",
+					skipToVideoText:"You can skip to video in: ",
+					skipToVideoButtonText:"Skip Ad",
+					adsTextNormalColor:"#888888",
+					adsTextSelectedColor:"#FFFFFF",
+					adsBorderNormalColor:"#444444",
+					adsBorderSelectedColor:"#FFFFFF",
+					//a to b loop
+					useAToB:"yes",
+					atbTimeBackgroundColor:"transparent",
+					atbTimeTextColorNormal:"#888888",
+					atbTimeTextColorSelected:"#FFFFFF",
+					atbButtonTextNormalColor:"#888888",
+					atbButtonTextSelectedColor:"#FFFFFF",
+					atbButtonBackgroundNormalColor:"#FFFFFF",
+					atbButtonBackgroundSelectedColor:"#000000",
+					//thumbnails preview
+					thumbnailsPreviewWidth:196,
+					thumbnailsPreviewHeight:110,
+					thumbnailsPreviewBackgroundColor:"#000000",
+					thumbnailsPreviewBorderColor:"#666",
+					thumbnailsPreviewLabelBackgroundColor:"#666",
+					thumbnailsPreviewLabelFontColor:"#FFF",
+					// context menu
+					showContextmenu:'yes',
+					showScriptDeveloper:"no",
+					contextMenuBackgroundColor:"#1f1f1f",
+					contextMenuBorderColor:"#1f1f1f",
+					contextMenuSpacerColor:"#333",
+					contextMenuItemNormalColor:"#666666",
+					contextMenuItemSelectedColor:"#FFFFFF",
+					contextMenuItemDisabledColor:"#333"
+				});
+			});
+		</script>
+		
+		<!-- the below line prevent any of its link to open inside iframe, when this page is used inside an iframe in other pages.... --> 
+		<base target="_PARENT">
+		
+	</head>
+	
+	<body style="background-color:#999999; padding:0px; margin:0px;">	
+		
+		<div id="myDiv" style="position:relative; left:0px; top:0px;"></div>
+		
+		<!--  ts-4_dvdrls_dac all --(Start)-->
+		<ul id="playlists" style="display:none;">
+			
+			<li data-source="ts-4_dvdrls_dac_disc-1" data-playlist-name="TS-4 DVDRLS DAC DISC-1" data-thumbnail-path="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/ts-4_dvdrls_dac_all.jpeg">
+				<p class="fwduvp-categories-title"><span class="fwduvp-header">Title: </span><span class="fwduvp-title">TS-4 DVDRLS DAC DISC-1</span></p>
+				<p class="fwduvp-categories-type"><span class="fwduvp-header">Type: </span>SEASON</p>
+				<p class="fwduvp-categories-description"><span class="fwduvp-header">Description: </span><strong>Click to watch</strong> all episodes.</p>
+			</li>
+			
+			<li data-source="ts-4_dvdrls_dac_disc-2" data-playlist-name="TS-4 DVDRLS DAC DISC-2" data-thumbnail-path="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/ts-4_dvdrls_dac_all.jpeg">
+				<p class="fwduvp-categories-title"><span class="fwduvp-header">Title: </span><span class="fwduvp-title">TS-4 DVDRLS DAC DISC-2</span></p>
+				<p class="fwduvp-categories-type"><span class="fwduvp-header">Type: </span>SEASON</p>
+				<p class="fwduvp-categories-description"><span class="fwduvp-header">Description: </span><strong>Click to watch</strong> all episodes.</p>
+			</li>
+			
+		</ul>
+		<!--  ts-4_dvdrls_dac all --(End)-->
+		
+		<!--  ts-4_dvdrls_dac_disc-1 all --(Start)-->
+		<ul id="ts-4_dvdrls_dac_disc-1" style="display:none;">
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e1 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e1.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Q4LG4eYrxNg67Mqv2eNvKLHXrPTGxMBV?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e1.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e1</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e1</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-1</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e1 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e2 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e2.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/19OumiLdh8jQRLIj0PJMjYKZLwyQ_TGt1?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e2.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e2</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e2</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-2</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e2 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e3 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e3.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Z5YGiiWg1NYrceBGfaREWatwMTVD-86K?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e3.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e3</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e3</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-3</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e3 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e4 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e4.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1VnCefjKGDoDwfXlLYxlspZo1_oIE3a8l?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e4.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e4</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e4</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-4</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e4 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e5 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e5.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/14q54kPokha3_K7mo6ZeAc7rx7HyeKI8t?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e5.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e5</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e5</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-5</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e5 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e6 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e6.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1_dUS4OrdeWlnJQdMxc4k1JTr27SnQSha?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e6.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e6</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e6</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-6</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e6 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e7 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e7.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1Y7ukNkDPKKONT6twF-IF1CSmibUshlQL?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e7.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e7</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e7</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-7</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e7 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e8 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e8.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1xEgS-LwBwv781MugkKIJ4Rf7qBtSYhLV?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e8.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e8</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e8</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-8</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e8 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e9 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e9.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/15qznrdebGt1m4uEG-KhdHuuYDyP8lAd9?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e9.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e9</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e9</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-9</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e9 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e10 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e10.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1tICl_6QZmC4I5gn6kWqJ41htH8nxwE8T?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e10.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e10</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e10</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-10</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e10 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e11 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e11.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1sZgqv1fajFvxor2lquuig8Ozq02FqaOQ?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e11.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e11</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e11</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-11</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e11 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e12 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e12.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1E1YTRSBgu3XXtXNIFE-wC2HIJPtuN5y5?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e12.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e12</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e12</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-12</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e12 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e13 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e13.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1UIZG-RsiZw3AqNVhpg5djCJceORx1ydj?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e13.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e13</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e13</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-13</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e13 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e14 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e14.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1emM-eMHZLRME_Bzwt7MIQF19sKDJwEzh?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e14.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e14</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e14</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-14</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e14 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e15 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e15.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1ShJP4f2KQL-63OgeJqjD6tAU-wIrTIlQ?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e15.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e15</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e15</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-15</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e15 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e16 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e16.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/17q5KxNGe1HFlBQrUOirnMzueBlQuNHIJ?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e16.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e16</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e16</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-16</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e16 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e17 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e17.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1GU7aMW2-irSt47g_azrRV6BYYugDc1iA?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e17.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e17</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e17</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-17</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e17 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e18 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e18.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1kpMrld0b8PBgl831hGRt9HugccJm2dCa?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e18.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e18</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e18</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-18</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e18 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e19 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e19.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/19ahQSCB4tbb__oBXLqsx5JBYcfAy7gxJ?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e19.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e19</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e19</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-19</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e19 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-1_e20 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e20.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1J9-wMx9RPj3WXoLUXRNxgue_O6ZZhT3N?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-1/ts-4_dvdrls_dac_disc-1_e20.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-1 e20</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-1 e20</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-1 Episode-20</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-1_e20 --(End)-->
+			
+		</ul>
+		<!--  ts-4_dvdrls_dac_disc-1 all --(End)-->
+		
+		<!--  ts-4_dvdrls_dac_disc-2 all --(Start)-->
+		<ul id="ts-4_dvdrls_dac_disc-2" style="display:none;">
+			
+			<!--  ts-4_dvdrls_dac_disc-2_e1 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e1.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1pZFRnESyXNV3ok1AzUKCMhXVwvMUp6nB?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e1.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-2 e1</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-2 e1</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-2 Episode-1</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-2_e1 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-2_e2 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e2.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1eFIFzdbvhciwDpc_F6Y06TOvEFAjeanh?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e2.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-2 e2</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-2 e2</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-2 Episode-2</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-2_e2 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-2_e3 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e3.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1O8RA_Fv-5Jc2jxwpXJdvJ08LBJrczYj0?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e3.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-2 e3</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-2 e3</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-2 Episode-3</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-2_e3 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-2_e4 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e4.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1kriC86QMmLmEV9e2rZRo5r2MsZQ2B6yn?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e4.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-2 e4</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-2 e4</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-2 Episode-4</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-2_e4 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-2_e5 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e5.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1HMEnieWL4lomo0wWM9alYI7seBfQSjyg?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e5.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-2 e5</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-2 e5</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-2 Episode-5</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-2_e5 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-2_e6 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e6.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1JPovF8d2oiJElFcb9rCVQl8E2CPntL3a?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e6.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-2 e6</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-2 e6</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-2 Episode-6</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-2_e6 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-2_e7 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e7.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1zjWX89yEaTMl_6gkq9asiar0oYHFpAYG?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e7.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-2 e7</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-2 e7</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-2 Episode-7</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-2_e7 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-2_e8 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e8.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1al5bqAk5ynWMsS9xJ5kasP_d4jlqeYOh?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e8.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-2 e8</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-2 e8</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-2 Episode-8</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-2_e8 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-2_e9 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e9.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1uNKThXiXTFh7yRvDdGwUPp7VtpHgxk-C?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e9.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-2 e9</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-2 e9</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-2 Episode-9</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-2_e9 --(End)-->
+			
+			<!--  ts-4_dvdrls_dac_disc-2_e10 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e10.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1tMwhNm3Mf0PM0EPXRWlO0gnJjJx9rUYF?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/deluxe-anniversary-collection/disc-2/ts-4_dvdrls_dac_disc-2_e10.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Disc-2 e10</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">Disc-2 e10</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Deluxe Anniversary Collection] Disc-2 Episode-10</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_dac_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_dac_disc-2_e10 --(End)-->
+			
+		</ul>
+		<!--  ts-4_dvdrls_dac_disc-2 all --(End)-->
+		
+		<!--  NO CONTENT --(Start)-->
+		<ul id="no-content" style="display:none;">
+			
+			<!--  NO CONTENT INSIDE --(Start)-->
+			<li data-thumb-source="../../../images/waiting.gif" data-video-source="content/no-video.mp4" data-poster-source="../../../images/waiting.gif" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Listen..</p>
+						<p class="fwduvp-thumbnail-description">This content is unavailable.</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">!! Attention !!</p>
+						<p class="fwduvp-video-main-description">You are opening a content which is NOT AVAILABLE..</p>
+					</div>
+				</div>
+			</li>
+			<!--  NO CONTENT INSIDE --(End)-->
+			
+		</ul>
+		<!--  NO CONTENT --(End)-->
+		
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Multiplex - 404 Error !!</title>
+		
+		<!-- "bootstrap.min.css" google drive hosting link -->
+		<link rel='stylesheet' href='https://drive.google.com/uc?export=view&id=19dJE1cSwDsH_pubHKt1_rkP5yfmDB7ah'>
+		
+		<!-- "custom-scroll-bar.css" google drive hosting link -->
+		<link rel='stylesheet' href='https://drive.google.com/uc?export=view&id=1aodBJc-w_vrmB-QP5USZRfPgqLFs-PSH'>
+		
+		<!-- "404-style.css" google drive hosting link -->
+		<link rel='stylesheet' href='https://drive.google.com/uc?export=view&id=16erh46C234rb1tOZZGSreM891MfsMEJX'>
+	</head>
+	
+	<body>
+		<section class="page_404">
+			<div class="container">
+				<div class="row">	
+					<div class="col-sm-12">
+						<div class="col-sm-12 col-sm-offset-1 text-white text-center">
+							
+							<!-- https://drive.google.com/uc?export=view&id=1kGoadoBrYdQIf1JeaC0RAwKTB_KVZ_g8
+								google drive hosting link for "404_preview.png"
+								
+								https://drive.google.com/uc?export=view&id=13FXeGJDh7BH8g0Otky_f7h5QBNhB0jKB
+							google drive hosting link for "404.gif" -->
+							
+							<div class="four_zero_four_bg" style="background-image: url(https://drive.google.com/uc?export=view&id=1kGoadoBrYdQIf1JeaC0RAwKTB_KVZ_g8);" data-image-full="https://drive.google.com/uc?export=view&id=13FXeGJDh7BH8g0Otky_f7h5QBNhB0jKB">
+								
+								<img src="https://drive.google.com/uc?export=view&id=1kGoadoBrYdQIf1JeaC0RAwKTB_KVZ_g8" alt="Multiplex" /> 
+								
+								<h1 class="text-center">404</h1>
+							</div>
+							
+							<div class="contant_box_404">
+								<h3 class="h2">
+									Look like you're lost
+								</h3>
+								
+								<p>the page you are looking for not available!</p>
+								
+								<a href="javascript:history.back()" class="link_404">Go Back !!</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script>
+			// wait for the entire page to finish loading
+			window.addEventListener('load', function() {
+				
+				// setTimeout to simulate the delay from a real page load
+				setTimeout(lazyLoad, 1000);
+				
+			});
+			
+			<!-- show preview then after load, show gif js code (start)-->
+			function lazyLoad() {
+				var card_images = document.querySelectorAll('.four_zero_four_bg');
+				
+				// loop over each card image
+				card_images.forEach(function(card_image) {
+					var image_url = card_image.getAttribute('data-image-full');
+					var content_image = card_image.querySelector('img');
+					
+					// change the src of the content image to load the new high res photo
+					content_image.src = image_url;
+					
+					// listen for load event when the new photo is finished loading
+					content_image.addEventListener('load', function() {
+						// swap out the visible background image with the new fully downloaded photo
+						card_image.style.backgroundImage = 'url(' + image_url + ')';
+						// add a class to remove the blur filter to smoothly transition the image change
+						card_image.className = card_image.className + ' is-loaded';
+					});
+					
+				});
+				
+			}
+			<!-- show preview then after load, show gif js code (end) -->
+		</script>
+	</body>
+</html>

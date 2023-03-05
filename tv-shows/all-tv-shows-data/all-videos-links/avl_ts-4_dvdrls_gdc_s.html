@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="Multiplex - Private Theatre Hall" />
+		<meta name="description" content="Multiplex - Private Theatre Hall" />
+		<meta name="author" content="Multiplex" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Multiplex - Private Theatre Hall</title>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="../../../images/favicon.png">
+		
+		<link rel="stylesheet" type="text/css"  href="content/global.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+		
+		<script type="text/javascript" src="content/java/FWDUVPlayer.js"></script>
+		
+		<!-- Setup video player-->
+		<script type="text/javascript">
+			FWDUVPUtils.onReady(function(){
+				
+				
+				const searchParams = new URLSearchParams(window.location.search);
+				
+				const seasonValue = searchParams.get('s');
+				const seasonValueIndex = (seasonValue) ? (Number(seasonValue) - 1).toString() : seasonValue;
+				
+				const episodeValue = searchParams.get('e');
+				const episodeValueIndex = (episodeValue) ? (Number(episodeValue) - 1).toString() : episodeValue;
+				
+				
+				new FWDUVPlayer({		
+					//main settings
+					instanceName:"player1",
+					parentId:"myDiv",
+					playlistsId:"playlists",
+					mainFolderPath:"content",
+					skinPath:"modern_skin_dark",
+					displayType:"fullscreen",
+					initializeOnlyWhenVisible:"no",
+					fillEntireposterScreen:"yes",
+					useVectorIcons:"no",
+					fillEntireVideoScreen:"no",
+					goFullScreenOnButtonPlay:"no",
+					playsinline:"yes",
+					privateVideoPassword:"lucky",
+					youtubeAPIKey:"",
+					useHEXColorsForSkin:"no",
+					normalHEXButtonsColor:"#666666",
+					googleAnalyticsTrackingCode:"",
+					useResumeOnPlay:"no",
+					useDeepLinking:"yes",
+					showPreloader:"yes",
+					preloaderBackgroundColor:"#000000",
+					preloaderFillColor:"#FFFFFF",
+					addKeyboardSupport:"yes",
+					autoScale:"yes",
+					showButtonsToolTip:"yes", 
+					stopVideoWhenPlayComplete:"no",
+					playAfterVideoStop:"no",
+					autoPlay:"yes",
+					autoPlayText:"Click To Unmute",
+					loop:"no",
+					shuffle:"no",
+					showErrorInfo:"yes",
+					maxWidth:980,
+					maxHeight:552,
+					volume:.8,
+					rewindTime:10,
+					buttonsToolTipHideDelay:1.5,
+					backgroundColor:"#000000",
+					videoBackgroundColor:"#000000",
+					posterBackgroundColor:"#000000",
+					buttonsToolTipFontColor:"#5a5a5a",
+					//logo settings
+					showLogo:"yes",
+					logoPath:"content/modern_skin_dark/logo.png",
+					hideLogoWithController:"yes",
+					logoPosition:"topRight",
+					logoLink:"../../../index.html",
+					logoMargins:10,
+					//playlists/categories settings
+					showPlaylistsSearchInput:"yes",
+					usePlaylistsSelectBox:"yes",
+					showPlaylistsButtonAndPlaylists:"yes",
+					showPlaylistsByDefault:"no",
+					thumbnailSelectedType:"opacity",
+					startAtPlaylist:seasonValueIndex,
+					buttonsMargins:15,
+					thumbnailMaxWidth:350, 
+					thumbnailMaxHeight:350,
+					horizontalSpaceBetweenThumbnails:40,
+					verticalSpaceBetweenThumbnails:40,
+					inputBackgroundColor:"#333333",
+					inputColor:"#999999",
+					//playlist settings
+					showPlaylistButtonAndPlaylist:"yes",
+					playlistPosition:"right",
+					showPlaylistByDefault:"no",
+					showPlaylistName:"yes",
+					showSearchInput:"yes",
+					showLoopButton:"yes",
+					showShuffleButton:"yes",
+					showPlaylistOnFullScreen:"yes",
+					showNextAndPrevButtons:"yes",
+					showThumbnail:"yes",
+					showOnlyThumbnail:"no",
+					forceDisableDownloadButtonForFolder:"yes",
+					addMouseWheelSupport:"yes", 
+					startAtRandomVideo:"no",
+					stopAfterLastVideoHasPlayed:"no",
+					addScrollOnMouseMove:"yes",
+					randomizePlaylist:'no',
+					folderVideoLabel:"VIDEO ",
+					playlistRightWidth:290,
+					playlistBottomHeight:380,
+					startAtVideo:episodeValueIndex,
+					maxPlaylistItems:50000,
+					thumbnailWidth:71,
+					thumbnailHeight:71,
+					spaceBetweenControllerAndPlaylist:1,
+					spaceBetweenThumbnails:1,
+					scrollbarOffestWidth:8,
+					scollbarSpeedSensitivity:.5,
+					playlistBackgroundColor:"#000000",
+					playlistNameColor:"#FFFFFF",
+					thumbnailNormalBackgroundColor:"#1b1b1b",
+					thumbnailHoverBackgroundColor:"#313131",
+					thumbnailDisabledBackgroundColor:"#272727",
+					searchInputBackgroundColor:"#000000",
+					searchInputColor:"#999999",
+					youtubeAndFolderVideoTitleColor:"#FFFFFF",
+					folderAudioSecondTitleColor:"#999999",
+					youtubeOwnerColor:"#888888",
+					youtubeDescriptionColor:"#888888",
+					mainSelectorBackgroundSelectedColor:"#FFFFFF",
+					mainSelectorTextNormalColor:"#FFFFFF",
+					mainSelectorTextSelectedColor:"#000000",
+					mainButtonBackgroundNormalColor:"#212021",
+					mainButtonBackgroundSelectedColor:"#FFFFFF",
+					mainButtonTextNormalColor:"#FFFFFF",
+					mainButtonTextSelectedColor:"#000000",
+					//controller settings
+					showController:"yes",
+					showControllerWhenVideoIsStopped:"yes",
+					showNextAndPrevButtonsInController:"no",
+					showRewindButton:"no",
+					showPlaybackRateButton:"yes",
+					showVolumeButton:"yes",
+					showTime:"yes",
+					showQualityButton:"yes",
+					showInfoButton:"yes",
+					showDownloadButton:"no",
+					showShareButton:"no",
+					showEmbedButton:"no",
+					showChromecastButton:"no",
+					showFullScreenButton:"yes",
+					disableVideoScrubber:"no",
+					showScrubberWhenControllerIsHidden:"yes",
+					showMainScrubberToolTipLabel:"yes",
+					showDefaultControllerForVimeo:"yes",
+					repeatBackground:"yes",
+					controllerHeight:43,
+					controllerHideDelay:3,
+					startSpaceBetweenButtons:10,
+					spaceBetweenButtons:10,
+					scrubbersOffsetWidth:2,
+					mainScrubberOffestTop:17,
+					timeOffsetLeftWidth:2,
+					timeOffsetRightWidth:2,
+					timeOffsetTop:-1,
+					volumeScrubberHeight:80,
+					volumeScrubberOfsetHeight:20,
+					timeColor:"#888888",
+					youtubeQualityButtonNormalColor:"#888888",
+					youtubeQualityButtonSelectedColor:"#FFFFFF",
+					scrubbersToolTipLabelBackgroundColor:"#FFFFFF",
+					scrubbersToolTipLabelFontColor:"#5a5a5a",
+					//advertisement on pause window
+					aopwTitle:"Advertisement",
+					aopwWidth:400,
+					aopwHeight:240,
+					aopwBorderSize:6,
+					aopwTitleColor:"#FFFFFF",
+					//subtitle
+					subtitlesOffLabel:"Subtitle off",
+					//popup add windows
+					showPopupAdsCloseButton:"yes",
+					//embed window and info window
+					embedAndInfoWindowCloseButtonMargins:15,
+					borderColor:"#333333",
+					mainLabelsColor:"#FFFFFF",
+					secondaryLabelsColor:"#a1a1a1",
+					shareAndEmbedTextColor:"#5a5a5a",
+					inputBackgroundColor:"#000000",
+					inputColor:"#FFFFFF",
+					//login
+		            playIfLoggedIn:"no",
+		            playIfLoggedInMessage:"Please <a href='https://google.com' target='_blank'>login</a> to play this video.",
+					//audio visualizer
+					audioVisualizerLinesColor:"#0099FF",
+					audioVisualizerCircleColor:"#FFFFFF",
+					//lightbox settings
+					closeLightBoxWhenPlayComplete:"no",
+					lightBoxBackgroundOpacity:.6,
+					lightBoxBackgroundColor:"#000000",
+					//sticky on scroll
+					stickyOnScroll:"no",
+					stickyOnScrollShowOpener:"yes",
+					stickyOnScrollWidth:"700",
+					stickyOnScrollHeight:"394",
+					//sticky display settings
+					showOpener:"yes",
+					showOpenerPlayPauseButton:"yes",
+					verticalPosition:"bottom",
+					horizontalPosition:"center",
+					showPlayerByDefault:"yes",
+					animatePlayer:"yes",
+					openerAlignment:"right",
+					mainBackgroundImagePath:"content/modern_skin_dark/main-background.png",
+					openerEqulizerOffsetTop:-1,
+					openerEqulizerOffsetLeft:3,
+					offsetX:0,
+					offsetY:0,
+					//playback rate / speed
+					defaultPlaybackRate:1, //0.25, 0.5, 1, 1.25, 1.2, 2
+					//cuepoints
+					executeCuepointsOnlyOnce:"no",
+					//annotations
+					showAnnotationsPositionTool:"no",
+					//ads
+					openNewPageAtTheEndOfTheAds:"no",
+					adsButtonsPosition:"left",
+					skipToVideoText:"You can skip to video in: ",
+					skipToVideoButtonText:"Skip Ad",
+					adsTextNormalColor:"#888888",
+					adsTextSelectedColor:"#FFFFFF",
+					adsBorderNormalColor:"#444444",
+					adsBorderSelectedColor:"#FFFFFF",
+					//a to b loop
+					useAToB:"yes",
+					atbTimeBackgroundColor:"transparent",
+					atbTimeTextColorNormal:"#888888",
+					atbTimeTextColorSelected:"#FFFFFF",
+					atbButtonTextNormalColor:"#888888",
+					atbButtonTextSelectedColor:"#FFFFFF",
+					atbButtonBackgroundNormalColor:"#FFFFFF",
+					atbButtonBackgroundSelectedColor:"#000000",
+					//thumbnails preview
+					thumbnailsPreviewWidth:196,
+					thumbnailsPreviewHeight:110,
+					thumbnailsPreviewBackgroundColor:"#000000",
+					thumbnailsPreviewBorderColor:"#666",
+					thumbnailsPreviewLabelBackgroundColor:"#666",
+					thumbnailsPreviewLabelFontColor:"#FFF",
+					// context menu
+					showContextmenu:'yes',
+					showScriptDeveloper:"no",
+					contextMenuBackgroundColor:"#1f1f1f",
+					contextMenuBorderColor:"#1f1f1f",
+					contextMenuSpacerColor:"#333",
+					contextMenuItemNormalColor:"#666666",
+					contextMenuItemSelectedColor:"#FFFFFF",
+					contextMenuItemDisabledColor:"#333"
+				});
+			});
+		</script>
+		
+		<!-- the below line prevent any of its link to open inside iframe, when this page is used inside an iframe in other pages.... --> 
+		<base target="_PARENT">
+		
+	</head>
+	
+	<body style="background-color:#999999; padding:0px; margin:0px;">	
+		
+		<div id="myDiv" style="position:relative; left:0px; top:0px;"></div>
+		
+		<!--  ts-4_dvdrls_gdc all --(Start)-->
+		<ul id="playlists" style="display:none;">
+			
+			<li data-source="ts-4_dvdrls_gdc_1961" data-playlist-name="TS-4 DVDRLS GDC 1961" data-thumbnail-path="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/ts-4_dvdrls_gdc_all.jpeg">
+				<p class="fwduvp-categories-title"><span class="fwduvp-header">Title: </span><span class="fwduvp-title">TS-4 DVDRLS GDC 1961</span></p>
+				<p class="fwduvp-categories-type"><span class="fwduvp-header">Type: </span>SEASON</p>
+				<p class="fwduvp-categories-description"><span class="fwduvp-header">Description: </span><strong>Click to watch</strong> all episodes.</p>
+			</li>
+			
+			<li data-source="ts-4_dvdrls_gdc_1962" data-playlist-name="TS-4 DVDRLS GDC 1962" data-thumbnail-path="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/ts-4_dvdrls_gdc_all.jpeg">
+				<p class="fwduvp-categories-title"><span class="fwduvp-header">Title: </span><span class="fwduvp-title">TS-4 DVDRLS GDC 1962</span></p>
+				<p class="fwduvp-categories-type"><span class="fwduvp-header">Type: </span>SEASON</p>
+				<p class="fwduvp-categories-description"><span class="fwduvp-header">Description: </span><strong>Click to watch</strong> all episodes.</p>
+			</li>
+			
+		</ul>
+		<!--  ts-4_dvdrls_gdc all --(End)-->
+		
+		<!--  ts-4_dvdrls_gdc_1961 all --(Start)-->
+		<ul id="ts-4_dvdrls_gdc_1961" style="display:none;">
+			
+			<!--  ts-4_dvdrls_gdc_1961_e1 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1961/ts-4_dvdrls_gdc_1961_e1.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1mciWtPpEoMKzbRqevxyXlY24h7CRbxUe?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1961/ts-4_dvdrls_gdc_1961_e1.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1961 e1</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1961 e1</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1961 Episode-1</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1961_e1 --(End)-->
+			
+			<!--  ts-4_dvdrls_gdc_1961_e2 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1961/ts-4_dvdrls_gdc_1961_e2.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1xGt71RfDMelUzs217xUOSx5PNBHHhJPO?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1961/ts-4_dvdrls_gdc_1961_e2.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1961 e2</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1961 e2</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1961 Episode-2</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1961_e2 --(End)-->
+			
+			<!--  ts-4_dvdrls_gdc_1961_e3 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1961/ts-4_dvdrls_gdc_1961_e3.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1CjEm165bN9V5X4kmy16QHYixejawLdpT?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1961/ts-4_dvdrls_gdc_1961_e3.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1961 e3</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1961 e3</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1961 Episode-3</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1961_e3 --(End)-->
+			
+		</ul>
+		<!--  ts-4_dvdrls_gdc_1961 all --(End)-->
+		
+		<!--  ts-4_dvdrls_gdc_1962 all --(Start)-->
+		<ul id="ts-4_dvdrls_gdc_1962" style="display:none;">
+			
+			<!--  ts-4_dvdrls_gdc_1962_e1 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e1.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/13Dd-lpeacxZ5cxHA7peauzDIRnKYtZsn?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e1.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1962 e1</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1962 e1</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1962 Episode-1</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1962_e1 --(End)-->
+			
+			<!--  ts-4_dvdrls_gdc_1962_e2 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e2.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1O2WBLBTreUDisAhgsTRAOYvHQSkc29aQ?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e2.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1962 e2</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1962 e2</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1962 Episode-2</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1962_e2 --(End)-->
+			
+			<!--  ts-4_dvdrls_gdc_1962_e3 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e3.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1i1O3u31nUzFg8064gWPMEqN98h3gVezx?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e3.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1962 e3</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1962 e3</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1962 Episode-3</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1962_e3 --(End)-->
+			
+			<!--  ts-4_dvdrls_gdc_1962_e4 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e4.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1wom6VEVijcMntvTjReB9tLUGsgt029Sd?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e4.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1962 e4</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1962 e4</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1962 Episode-4</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1962_e4 --(End)-->
+			
+			<!--  ts-4_dvdrls_gdc_1962_e5 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e5.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/162263qO0zyYf2SeOpiZS3KbLBzURX36U?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e5.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1962 e5</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1962 e5</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1962 Episode-5</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1962_e5 --(End)-->
+			
+			<!--  ts-4_dvdrls_gdc_1962_e6 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e6.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1awJrEkGSWuPEson4x4p2UlciaVCOPNZR?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e6.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1962 e6</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1962 e6</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1962 Episode-6</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1962_e6 --(End)-->
+			
+			<!--  ts-4_dvdrls_gdc_1962_e7 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e7.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1lu-AejAlGUjwigydWPxSKyC4S4CEX96r?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e7.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1962 e7</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1962 e7</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1962 Episode-7</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1962_e7 --(End)-->
+			
+			<!--  ts-4_dvdrls_gdc_1962_e8 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e8.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/14lpgMe-Wcgj-KQhdz8QNEVKAK2uf8lfI?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e8.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1962 e8</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1962 e8</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1962 Episode-8</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1962_e8 --(End)-->
+			
+			<!--  ts-4_dvdrls_gdc_1962_e9 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e9.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1y7Up9RHqobZuT6LsrudEf-_DwLShD_qv?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e9.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1962 e9</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1962 e9</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1962 Episode-9</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1962_e9 --(End)-->
+			
+			<!--  ts-4_dvdrls_gdc_1962_e10 --(Start)-->
+			<li data-thumb-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e10.jpeg" data-video-source="https://www.googleapis.com/drive/v3/files/1SBHXCQQeyAEwfSb1yCeRtj3L8SlTaoZR?alt=media&key=AIzaSyA3ij1H9KT6LpqbWLVxWFh30WKJFOBzDX8&v=.mp4" data-poster-source="../../../images/tv-shows/tv-show-4/ts-4_all-seasons/dvd-releases/gene-deitch-collection/1962/ts-4_dvdrls_gdc_1962_e10.jpeg" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">1962 e10</p>
+						<p class="fwduvp-thumbnail-description">Click to Watch this Episode..</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">1962 e10</p>
+						<p class="fwduvp-video-main-description">You are watching Tom and Jerry [DVD-RELEASES - Gene Deitch Collection] 1962 Episode-10</p>
+						<p class="fwduvp-link">For more information about this Season.. <a href="../../tv-show-4/ts-4_all-seasons/dvd-releases/ts-4_dvdrls_gdc_all.html">Click here</a></p>
+					</div>
+				</div>
+			</li>
+			<!--  ts-4_dvdrls_gdc_1962_e10 --(End)-->
+			
+		</ul>
+		<!--  ts-4_dvdrls_gdc_1962 all --(End)-->
+		
+		<!--  NO CONTENT --(Start)-->
+		<ul id="no-content" style="display:none;">
+			
+			<!--  NO CONTENT INSIDE --(Start)-->
+			<li data-thumb-source="../../../images/waiting.gif" data-video-source="content/no-video.mp4" data-poster-source="../../../images/waiting.gif" data-downloadable="no" data-thumbnails-preview="auto">
+				<div data-video-short-description="">
+					<div>
+						<p class="fwduvp-thumbnail-title">Listen..</p>
+						<p class="fwduvp-thumbnail-description">This content is unavailable.</p>
+					</div>
+				</div>
+				<div data-video-long-description="">
+					<div>
+						<p class="fwduvp-video-title">!! Attention !!</p>
+						<p class="fwduvp-video-main-description">You are opening a content which is NOT AVAILABLE..</p>
+					</div>
+				</div>
+			</li>
+			<!--  NO CONTENT INSIDE --(End)-->
+			
+		</ul>
+		<!--  NO CONTENT --(End)-->
+		
+	</body>
+</html>

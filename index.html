@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" >
+	
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="Multiplex - Private Theatre Hall" />
+		<meta name="description" content="Multiplex - Private Theatre Hall" />
+		<meta name="author" content="Multiplex" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Multiplex - Private Theatre Hall</title>
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="images/favicon.png">
+		
+		<link rel="stylesheet" href="css/reset.min.css">
+		
+		<link rel='stylesheet' href='css/all.min.css'>
+		
+		<!-- CSS Custom Scroll Bar-->
+		<link rel="stylesheet" href="css/custom-scroll-bar.css" />
+		
+		<!-- CSS bootstrap-->
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<!--  Style -->
+		<link rel="stylesheet" href="css/home-page_style.css" />
+		<!--  Responsive -->
+		<link rel="stylesheet" href="css/responsive.css" />
+		
+		<link rel='stylesheet' href='css/PerpetualJ.css'>
+		
+		<link rel="stylesheet" href="css/font-awesome-animation.min.css">
+		
+		<style>
+			/* Card */
+			.p-card {
+			position: relative;
+			width: 250px;
+			height: 450px;
+			background-color: #fff;
+			border-radius: 5px;
+			margin: 30px 10px;
+			color: #333;
+			}
+			
+			/* Character Area */
+			.p-card > .character-area > img.character {
+			position: absolute;
+			height: 300px;
+			top: -30px;
+			left: 50%;
+			transform: translate(-50%);
+			}
+			
+			.p-card > .character-area {
+			width: 100%;
+			height: 225px;
+			background-size: cover;
+			background-position: center;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+			}
+			
+			/* Card Details */
+			.p-card > .details {
+			padding: 10px;
+			margin-top: 20px;
+			}
+			
+			.p-card > .details > span {
+			text-transform: uppercase;
+			}
+			
+			/* Card Stats */
+			.p-card > .stats {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;
+			}
+			
+			.p-card > .stats > li {
+			display: inline-block;
+			width: 50%;
+			text-align: center;
+			font-size: 14px;
+			padding: 5px 0;
+			color: #fff;
+			}
+			
+			.p-card > .stats > li > h5 {
+			margin: 0;
+			}
+			
+			.p-card > .stats > li:hover {
+			background-color: #fff5;
+			}
+			
+			.p-card > .stats > li:first-of-type {
+			border-right: 1px solid #33333342;
+			border-bottom-left-radius: 5px;
+			margin-right: -5px;
+			}
+			
+			/* Hover Effects */
+			.p-card:hover > .character-area {
+			height: 235px;
+			}
+			
+			.p-card:hover > .character-area > img.character {
+			height: 330px;
+			top: -45px;
+			}
+			
+			.p-card:hover > .details {
+			margin-top: 30px;
+			}
+			
+			/* Tv-Show-1 */
+			.p-card.ts-1 {
+			box-shadow: 0 0 25px rgba(190, 100, 255, 0.55);
+			}
+			
+			.p-card.ts-1:hover {
+			box-shadow: 0 5px 35px #be64ff;
+			}
+			
+			.p-card.ts-1 > .details > span {
+			color: #93c;
+			}
+			
+			.p-card.ts-1 > .character-area {
+			background-image: url("images/home-page_images/Psychic.png");
+			}
+			
+			.p-card.ts-1 > .stats {
+			background: #8e2de2;
+			background: linear-gradient(to right, #4a00e0, #8e2de2);
+			}
+			
+			/* Tv-Show-2 */
+			.p-card.ts-2 {
+			box-shadow: 0 0 25px rgba(255, 100, 30, 0.55);
+			}
+			
+			.p-card.ts-2:hover {
+			box-shadow: 0 0 35px #ff641e;
+			}
+			
+			.p-card.ts-2 > .details > span {
+			color: #f55;
+			}
+			
+			.p-card.ts-2 > .character-area {
+			background-image: url("images/home-page_images/Swirl.jpg");
+			}
+			
+			.p-card.ts-2 > .stats {
+			background: #f12711;
+			background: linear-gradient(to right, #f5af19, #f12711);
+			}
+			
+			/* Tv-Show-3 */
+			.p-card.ts-3 {
+			box-shadow: 0 0 25px rgb(100 248 255 / 55%);
+			}
+			
+			.p-card.ts-3:hover {
+			box-shadow: 0 5px 35px #31e6efe0;
+			}
+			
+			.p-card.ts-3 > .details > span {
+			color: #33b7cc;
+			}
+			
+			.p-card.ts-3 > .character-area {
+			background-image: url("images/home-page_images/Sun-burst.jpg");
+			}
+			
+			.p-card.ts-3 > .stats {
+			background: #00cbff;
+			background: linear-gradient(to right, #066695, #00cbff);
+			}
+			
+			/* Tv-Show-4 */
+			.p-card.ts-4 {
+			box-shadow: 0 0 25px rgb(0 49 169 / 55%);
+			}
+			
+			.p-card.ts-4:hover {
+			box-shadow: 0 5px 35px #2a68ff;
+			}
+			
+			.p-card.ts-4 > .details > span {
+			color: #2a68ff;
+			}
+			
+			.p-card.ts-4 > .character-area {
+			background-image: url("images/home-page_images/fun-particle.jpg");
+			}
+			
+			.p-card.ts-4 > .stats {
+			background: #2a68ff;
+			background: linear-gradient(to right, #0038c1, #5285ff);
+			}
+			
+			/* New-Tv-Show */
+			.p-card.new-ts {
+			box-shadow: 0 0 25px rgb(175 174 177 / 55%);
+			}
+			
+			.p-card.new-ts:hover {
+			box-shadow: 0 5px 35px #afaeb1;
+			}
+			
+			.p-card.new-ts > .details > span {
+			color: #494949;
+			}
+			
+			.p-card.new-ts > .character-area {
+			background-image: url("images/home-page_images/upcoming-show_bg.jpg");
+			}
+			
+			.p-card.new-ts > .stats {
+			background: #494949;
+			background: linear-gradient(to right, #494949, #605f5f);
+			}
+			
+			/* Inspiration Link */
+			.lead > a {
+			color: #f55;
+			}
+			
+			.lead > a:hover {
+			text-decoration: none;
+			color: #f77;
+			}
+			
+			/* Fonts */
+			.display-3,
+			.details > h3 {
+			font-family: "Quicksand" !important;
+			}
+			
+			.lead,
+			.details > span,
+			.details > p,
+			.stats > li {
+			font-family: 'Roboto', sans-serif !important;
+			}
+			
+			/* Bootstrap Overrides */
+			.col-12 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			}
+			
+			/* Template Overrides */
+			html, body {
+			background-image: url("images/home-page_images/Instinct.jpg");
+			background-size: cover;
+			background-position: center;
+			}
+			
+			.primary-content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			}
+			
+			/* User Select None */
+			* {
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			}
+			
+			.tv-show:target {
+			display: none;
+			}
+			
+		</style>
+		
+	</head>
+	
+	<body>
+		
+		<!--=========== Loader =============-->
+		<div id="gen-loading">
+			<div id="gen-loading-center">
+				<img src="images/multiplex-loading.gif" alt="loading">
+			</div>
+		</div>
+		<!--=========== Loader =============-->
+		
+		<section class="gen-section-padding-2">
+			<div class="container">
+				<div id="primary-content" class="primary-content">
+					<div class="row justify-content-center">
+						<div class="col-12 col-lg-4 col-md-6 col-sm-12 tv-show" id="hide-1">
+							<div class="p-card ts-1">
+								<div class="character-area">
+									<img class="character" src="images/home-page_images/Doraemon.png" />
+								</div>
+								<div class="details">
+									<span>Tv show 1</span>
+									<h4>DORAEMON</h4>
+									<p>A cat-type robot came from future to help Nobita.</p>
+								</div>
+								<ul class="stats">
+									<li>
+										<a class="btn btn-danger btn-sm" href="tv-shows/add-ons/shows-map/tv-show-1/ts-1_all_seasons-cum-movies_list.html" role="button">
+											<span><i class="fas fa-list text-warning mr-2"></i>List view</span>
+										</a>
+									</li>
+									<li>
+										<a class="btn btn-danger btn-sm" href="tv-shows/tv-show-1.html" role="button">
+											<span><i class="fas fa-play text-warning faa-horizontal animated mr-2"></i>View show</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4 col-md-6 col-sm-12 tv-show" id="hide-2">
+							<div class="p-card ts-2">
+								<div class="character-area">
+									<img class="character" src="images/home-page_images/Shin-chan.png" />
+								</div>
+								<div class="details">
+									<span>Tv show 2</span>
+									<h4>SHIN CHAN</h4>
+									<p>Story of a the naughtiest 5 year old boy.</p>
+								</div>
+								<ul class="stats">
+									<li>
+										<a class="btn btn-danger btn-sm" href="tv-shows/add-ons/shows-map/tv-show-2/ts-2_all_seasons-cum-movies_list.html" role="button">
+											<span><i class="fas fa-list text-warning mr-2"></i>List view</span>
+										</a>
+									</li>
+									<li>
+										<a class="btn btn-danger btn-sm" href="tv-shows/tv-show-2.html" role="button">
+											<span><i class="fas fa-play text-warning faa-horizontal animated mr-2"></i>View show</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4 col-md-6 col-sm-12 tv-show" id="hide-3">
+							<div class="p-card ts-3">
+								<div class="character-area">
+									<img class="character" src="images/home-page_images/Ninja-hattori.png" />
+								</div>
+								<div class="details">
+									<span>Tv show 3</span>
+									<h4>NINJA HATTORI</h4>
+									<p>A ninja boy who helps Kenichi with his problems.</p>
+								</div>
+								<ul class="stats">
+									<li>
+										<a class="btn btn-danger btn-sm" href="tv-shows/add-ons/shows-map/tv-show-3/ts-3_all_seasons-cum-movies_list.html" role="button">
+											<span><i class="fas fa-list text-warning mr-2"></i>List view</span>
+										</a>
+									</li>
+									<li>
+										<a class="btn btn-danger btn-sm" href="tv-shows/tv-show-3.html" role="button">
+											<span><i class="fas fa-play text-warning faa-horizontal animated mr-2"></i>View show</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4 col-md-6 col-sm-12 tv-show" id="hide-4">
+							<div class="p-card ts-4">
+								<div class="character-area">
+									<img class="character" src="images/home-page_images/Tom-and-jerry.png" />
+								</div>
+								<div class="details">
+									<span>Tv show 4</span>
+									<h4>TOM & JERRY</h4>
+									<p>Story of Cat & mouse, who fun & fight with each other.</p>
+								</div>
+								<ul class="stats">
+									<li>
+										<a class="btn btn-danger btn-sm" href="tv-shows/add-ons/shows-map/tv-show-4/ts-4_all_seasons-cum-movies_list.html" role="button">
+											<span><i class="fas fa-list text-warning mr-2"></i>List view</span>
+										</a>
+									</li>
+									<li>
+										<a class="btn btn-danger btn-sm" href="tv-shows/tv-show-4.html" role="button">
+											<span><i class="fas fa-play text-warning faa-horizontal animated mr-2"></i>View show</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4 col-md-6 col-sm-12">
+							<div class="p-card new-ts">
+								<div class="character-area">
+									<img class="character" src="images/home-page_images/upcoming-show.png" />
+								</div>
+								<div class="details">
+									<span>???</span>
+									<h4>New Tv show</h4>
+									<p>COMING SOON</p>
+									<i class="fas fa-ellipsis-h faa-passing animated"></i>
+								</div>
+								<ul class="stats">
+									<li>
+										<a class="btn btn-secondary btn-sm disabled" role="button" aria-disabled="true">
+											<span><i class="fas fa-list text-dark mr-2"></i>List view</span>
+										</a>
+									</li>
+									<li>
+										<a class="btn btn-secondary btn-sm disabled" role="button" aria-disabled="true">
+											<span><i class="fas fa-pause text-dark faa-flash animated faa-slow mr-2"></i>View show</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- footer start -->
+		<iframe class="footer-iframe" width="100%" height="730" frameborder="0" scrolling="no" allowtransparency="true" src="tv-shows/add-ons/footer.html"></iframe>
+		<!-- footer End -->
+		
+		<!-- Back-to-Top start -->
+		<div id="back-to-top">
+			<a class="top" id="top" href="#top"> <i class="fas fa-angle-up"></i> </a>
+		</div>
+		<!-- Back-to-Top end -->
+		
+		<!-- js-min -->
+		<script src="js/jquery-3.6.0.min.js"></script>
+		<!-- JS bootstrap -->
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/home-page_script.js"></script>
+	</body>
+	
+</html>
